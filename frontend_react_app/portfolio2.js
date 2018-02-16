@@ -2693,13 +2693,17 @@ var Projects = exports.Projects = function (_React$Component) {
                 'This is the website that you are currently visiting. Click ',
                 _react2.default.createElement(
                   'span',
-                  null,
+                  { onClick: function onClick() {
+                      var win = window.open('https://github.com/rewitt94/portfolio-two-server', '_blank');win.focus();
+                    } },
                   'here'
                 ),
                 ' to view the back-end express server and click ',
                 _react2.default.createElement(
                   'span',
-                  null,
+                  { onClick: function onClick() {
+                      var win = window.open('https://github.com/rewitt94/portfolio-two-frontend', '_blank');win.focus();
+                    } },
                   'here'
                 ),
                 ' to view the front-end React app. The website is compatible with mobile (it is compatible with varied screen sizes).'
@@ -2723,7 +2727,9 @@ var Projects = exports.Projects = function (_React$Component) {
               ),
               _react2.default.createElement(
                 'button',
-                null,
+                { onClick: function onClick() {
+                    var win = window.open('/submarine', '_blank');win.focus();
+                  } },
                 'Play now'
               )
             ),
@@ -2733,7 +2739,15 @@ var Projects = exports.Projects = function (_React$Component) {
               _react2.default.createElement(
                 'p',
                 null,
-                'This was my first real programming acheivement. It is a game developed using entirely Javascript, HTML and CSS. The code is sloppy (very amateur) and not optimized. However, at the time I was completely thrilled with the result. Have a play!',
+                'This was my first real programming acheivement. It is a game developed using entirely Javascript, HTML and CSS. The code is sloppy and not optimized. However, at the time I was completely thrilled with the result. You can see it ',
+                _react2.default.createElement(
+                  'span',
+                  { onClick: function onClick() {
+                      var win = window.open('https://github.com/rewitt94/submarine', '_blank');win.focus();
+                    } },
+                  'here'
+                ),
+                '. Have a play!',
                 _react2.default.createElement('br', null),
                 _react2.default.createElement('br', null),
                 'N.B. The play button opens a new tab I as it is not integrated into the React App. This game will not work on mobile.'
@@ -2765,7 +2779,9 @@ var Projects = exports.Projects = function (_React$Component) {
                 'This is a my original website. A back-end express serves up different html files. It is offline because the current website is vastly superior, but you can view the code ',
                 _react2.default.createElement(
                   'span',
-                  null,
+                  { onClick: function onClick() {
+                      var win = window.open('https://github.com/rewitt94/portfolio', '_blank');win.focus();
+                    } },
                   'here'
                 ),
                 '. I have included this project to see the progression from my first website to the second.'
@@ -3212,7 +3228,9 @@ var CV = exports.CV = function (_React$Component) {
               'Please see my CV on GitHub ',
               _react2.default.createElement(
                 'span',
-                null,
+                { onClick: function onClick() {
+                    var win = window.open('https://github.com/rewitt94/CV', '_blank');win.focus();
+                  } },
                 'here'
               ),
               '.'
