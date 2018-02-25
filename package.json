@@ -1,7 +1,9 @@
 {
-  "name": "express-html",
+  "name": "portfolio-two-server",
   "version": "0.0.1",
   "dependencies": {
-    "express": "4.15.5"
+    "express": "*",
+    "sqlite3": "*",
+    "body-parser": "*"
   }
 }

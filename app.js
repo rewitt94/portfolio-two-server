@@ -20,3 +20,31 @@ const port = parseInt(process.argv[2]) || 4000;
 app.listen(port)
 
 console.log(`Running on port ${port}`)
+
+
+// This is the API for the highscores feature of the submarine game
+
+var sqlite = require('sqlite3').verbose();
+var db = new sqlite.Database('./submarine/leaderboard');
+
+var bodyParser = require('body-parser');
+app.use(bodyParser.json());
+
+app.get('/submarine_load', function(req,res){
+  db.all(`
+  SELECT * FROM leaderboard
+  `, function(err, leaderboard) {
+    if (err != null) {
+    res.status(500).send('Something broke!');
+    }
+    res.send(JSON.stringify(leaderboard));
+  });
+});
+
+app.post('/submarine_add', function(req,res){
+  var name = req.body.name;
+  var score = req.body.score;
+  console.log([name,score]);
+  db.run(`INSERT INTO leaderboard
+  VALUES ('${name}', ${score})`);
+});
