@@ -13,7 +13,7 @@ app.get('/submarine',function(req,res){
 })
 
 app.get('/reversi',function(req,res){
-  res.sendFile(__dirname + '/submarine/reversi.html')
+  res.sendFile(__dirname + '/reversi/reversi.html')
 })
 
 // 0 is node binary
