@@ -12,6 +12,10 @@ app.get('/submarine',function(req,res){
   res.sendFile(__dirname + '/submarine/submarine.html')
 })
 
+app.get('/reversi',function(req,res){
+  res.sendFile(__dirname + '/submarine/reversi.html')
+})
+
 // 0 is node binary
 // 1 is .js file
 // extra stuff starts from 2

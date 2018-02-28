@@ -2698,6 +2698,50 @@ var Projects = exports.Projects = function (_React$Component) {
                 _react2.default.createElement(
                   'span',
                   null,
+                  'Reversi'
+                )
+              ),
+              _react2.default.createElement(
+                'button',
+                { onClick: function onClick() {
+                    var win = window.open('/reversi', '_blank');win.focus();
+                  } },
+                'Play now'
+              )
+            ),
+            _react2.default.createElement(
+              'div',
+              { className: 'project_description' },
+              _react2.default.createElement(
+                'p',
+                null,
+                'A copy of the classic board game Reversi (Othello). Built with vanilla Javascript, HTML and CSS. Still in the early stages of development, but definitely functional as a splitscreen game. The code needs major encapsulation - take a look yourself ',
+                _react2.default.createElement(
+                  'span',
+                  { onClick: function onClick() {
+                      var win = window.open('https://github.com/rewitt94/reversi', '_blank');win.focus();
+                    } },
+                  'here'
+                ),
+                '. I hope to add a computer AI (and maybe an online multiplayer).',
+                _react2.default.createElement('br', null),
+                _react2.default.createElement('br', null),
+                'N.B. There is a known bug if there is no valid move, but this a very rare event in game.'
+              )
+            )
+          ),
+          _react2.default.createElement(
+            'div',
+            { style: { flexDirection: 'row-reverse' }, className: 'project_row' },
+            _react2.default.createElement(
+              'div',
+              { className: 'project_title' },
+              _react2.default.createElement(
+                'h1',
+                null,
+                _react2.default.createElement(
+                  'span',
+                  null,
                   'Portfolio v2'
                 )
               )
@@ -2730,7 +2774,7 @@ var Projects = exports.Projects = function (_React$Component) {
           ),
           _react2.default.createElement(
             'div',
-            { style: { flexDirection: 'row-reverse' }, className: 'project_row' },
+            { className: 'project_row' },
             _react2.default.createElement(
               'div',
               { className: 'project_title' },
@@ -2768,13 +2812,13 @@ var Projects = exports.Projects = function (_React$Component) {
                 '. Have a play!',
                 _react2.default.createElement('br', null),
                 _react2.default.createElement('br', null),
-                'N.B. The play button opens a new tab I as it is not integrated into the React App. This game will not work on mobile.'
+                'N.B. This game will not work on mobile.'
               )
             )
           ),
           _react2.default.createElement(
             'div',
-            { className: 'project_row' },
+            { style: { flexDirection: 'row-reverse' }, className: 'project_row' },
             _react2.default.createElement(
               'div',
               { className: 'project_title' },
