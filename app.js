@@ -3,6 +3,7 @@ var app = express();
 
 app.use(express.static(__dirname + '/frontend_react_app'));
 app.use(express.static(__dirname + '/submarine'));
+app.use(express.static(__dirname + '/reversi'));
 
 app.get('/',function(req,res){
   res.sendFile(__dirname + '/frontend_react_app/index.html')
