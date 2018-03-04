@@ -2,28 +2,28 @@
 
 <head>
   <title>reversi</title>
-<script src="./435c0213dc75545f8745372eea42911e.js"></script></head>
+</head>
 
-<link rel="stylesheet" type="text/css" href="./435c0213dc75545f8745372eea42911e.css">
+<link rel="stylesheet" type="text/css" href="./style.css">
 <div id="outer_div">
 
   <div class="options_div" id="game_mode_div">
     <button onclick="chooseGameMode('split_screen')">Split Screen</button>
-    <br><br>
+    <br></br>
     <button onclick="chooseGameMode('multiplayer')">Multiplayer</button>
-    <br><br>
+    <br></br>
     <button onclick="chooseGameMode('computer_opponent')">Computer Opponent</button>
   </div>
 
   <div class="options_div" id="lobby_options_div" style="visibility:hidden;">
     <button onclick="createMatch()">Create Match</button>
-    <br><br>
+    <br></br>
     <button onclick="searchMatches()">Search Match</button>
   </div>
 
   <div class="options_div" id="post_match_div" style="visibility:hidden;">
-    <input id="match_name" value="match_name">
-    <br><br>
+    <input id="match_name" value="match_name"></input>
+    <br></br>
     <button onclick="postMatch(document.getElementById('match_name').value)">Post Match</button>
   </div>
 
@@ -33,13 +33,13 @@
 
   <div class="options_div" id="player_color_div" style="visibility:hidden;">
     <button onclick="chooseColor('white')">Play As Black</button>
-    <br><br>
+    <br></br>
     <button onclick="chooseColor('black')">Play As White</button>
   </div>
 
   <div id="score_div">
     <h1>black score: <span id="black_score">2</span></h1>
-    <br><br>
+    <br></br>
     <h1>white score: <span id="white_score">2</span></h1>
   </div>
 
@@ -127,4 +127,4 @@
   </div>
 </div>
 
-<script src="./373e3893e77d85624afd7cb389ecc5bd.js"></script>
+<script src="./game.js"></script>
