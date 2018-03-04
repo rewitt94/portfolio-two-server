@@ -558,7 +558,7 @@ function makeMove(idString) {
   cell.invalidate();
 }
 
-var ws = new WebSocket('ws://localhost:2018');
+var ws = new WebSocket('ws://ricky.hewitt.tech:80/reversiws');
 
 // event emmited when connected
 ws.onopen = function () {
@@ -597,7 +597,7 @@ window.searchMatches = function () {
 // event emitted when recieving message
 ws.onmessage = function (message) {
   message = message.data.split(',');
-
+  console.log(message);
   if (message[0] == 'lobby') {
     var lobby = document.getElementById('lobby_div');
     if (message[1] == 'no_games') {
@@ -649,13 +649,11 @@ ws.onmessage = function (message) {
   }
 
   if (message[0] == 'other_player_missing') {
-    var div = document.getElementById('cart_item');
-    while (div.firstChild) {
-      div.removeChild(div.firstChild);
-    }
+    alert('connection failed');
+    location.reload();
   }
 };
-},{"./board.js":5,"./cell.js":6,"./scoreboard.js":7,"./gamemode.js":8}],38:[function(require,module,exports) {
+},{"./board.js":5,"./cell.js":6,"./scoreboard.js":7,"./gamemode.js":8}],10:[function(require,module,exports) {
 
 var global = (1, eval)('this');
 var OldModule = module.bundle.Module;
@@ -677,7 +675,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = '' || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + '54668' + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + '53858' + '/');
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
 
@@ -778,5 +776,5 @@ function hmrAccept(bundle, id) {
     return hmrAccept(global.require, id);
   });
 }
-},{}]},{},[38,3])
+},{}]},{},[10,3])
 //# sourceMappingURL=/dist/373e3893e77d85624afd7cb389ecc5bd.map
