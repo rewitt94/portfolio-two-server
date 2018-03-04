@@ -4,6 +4,7 @@
   "dependencies": {
     "express": "*",
     "sqlite3": "*",
-    "body-parser": "*"
+    "body-parser": "*",
+    "ws": "*"
   }
 }
