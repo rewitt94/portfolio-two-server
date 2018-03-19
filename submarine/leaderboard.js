@@ -1,8 +1,10 @@
 var scoreSaved = false;
 
 function addScore(nameInput, scoreInput) {
-  if (!scoreSaved) {
-    scoreSaved = true;
+    if (nameInput.length > 15) {
+      document.getElementById('player_name').value = 'this_name_is_too_long'
+      return
+    }
     fetch('/submarine_add',{
       method: 'POST',
       headers: new Headers({ "Content-Type": "application/json" }),
@@ -11,8 +13,16 @@ function addScore(nameInput, scoreInput) {
         score: scoreInput
       })
     });
-  }
 };
+
+function checkInputLength(nameInput) {
+  if (nameInput.length > 15) {
+    document.getElementById('player_name').value = 'this_name_is_too_long'
+    return false
+  } else {
+    return true
+  }
+}
 
 function loadLeaderboard() {
   fetch('/submarine_load')
@@ -49,6 +59,36 @@ function loadLeaderboard() {
         columnFour.appendChild(playerDiv)
       }
     })
+}
+
+function clearLeaderboard() {
+  var columnOne = document.getElementById('column_one');
+  while (columnOne.firstChild) {
+    columnOne.removeChild(columnOne.firstChild);
+  }
+  var columnTwo = document.getElementById('column_two');
+  while (columnTwo.firstChild) {
+    columnTwo.removeChild(columnTwo.firstChild);
+  }
+  var columnThree = document.getElementById('column_three');
+  while (columnThree.firstChild) {
+    columnThree.removeChild(columnThree.firstChild);
+  }
+  var columnFour = document.getElementById('column_four');
+  while (columnFour.firstChild) {
+    columnFour.removeChild(columnFour.firstChild);
+  }
+}
+
+function addToLeaderboard(nameInput, scoreInput) {
+  if (!scoreSaved) {
+    if (checkInputLength(nameInput)) {
+      addScore(nameInput, scoreInput)
+      clearLeaderboard()
+      setTimeout(() => loadLeaderboard(), 10)
+      scoreSaved = true;
+    }
+  }
 }
 
 loadLeaderboard()

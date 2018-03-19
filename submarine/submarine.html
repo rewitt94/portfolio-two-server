@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <head>
-  <title>ricky.hewitt.tech</title>
+  <title>rickyHewittTech</title>
 </head>
 
 <link rel="stylesheet" type="text/css" href="submarine.css">
@@ -11,8 +11,6 @@
 <p id="levelUp"></p>
 
 <p id="travelled">Distance Travelled: <span id="distance">N/A</span> </p>
-
-<img src="http://www.freepngimg.com/download/fire/5-2-fire-free-download-png.png" id="flame">
 
 <div id="instructions">
   <h1>Instructions</h1>
@@ -39,7 +37,7 @@
   </div>
   <input id="player_name" value="your_name_here"></input>
   <br></br>
-  <button id="reload" onclick="addScore(document.getElementById('player_name').value,Number(document.getElementById('end_score').innerHTML))">Save Score</button>
+  <button id="reload" onclick="addToLeaderboard(document.getElementById('player_name').value,Number(document.getElementById('end_score').innerHTML))">Save Score</button>
   <button id="reload" onclick="reload()">Reload Game</button>
 </div>
 

@@ -1,5 +1,5 @@
-var sqlite = require('sqlite3').verbose()
-var db = new sqlite.Database('leaderboard')
+var sqlite = require('sqlite3').verbose();
+var db = new sqlite.Database('leaderboard');
 
 db.run(`
   CREATE TABLE
