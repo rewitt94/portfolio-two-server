@@ -4,6 +4,8 @@ var app = express();
 app.use(express.static(__dirname + '/frontend_react_app'));
 app.use(express.static(__dirname + '/submarine'));
 app.use(express.static(__dirname + '/reversi'));
+app.use(express.static(__dirname + '/bowling'));
+
 
 app.get('/',function(req,res){
   res.sendFile(__dirname + '/frontend_react_app/index.html')
@@ -14,7 +16,11 @@ app.get('/submarine',function(req,res){
 })
 
 app.get('/reversi',function(req,res){
-  res.sendFile(__dirname + '/reversi/index.html')
+  res.sendFile(__dirname + '/reversi/reversi.html')
+})
+
+app.get('/bowling',function(req,res){
+  res.sendFile(__dirname + '/bowling/bowling.html')
 })
 
 // 0 is node binary
@@ -25,7 +31,6 @@ const port = parseInt(process.argv[2]) || 4000;
 app.listen(port)
 
 console.log(`Running on port ${port}`)
-
 
 // This is the API for the highscores feature of the submarine game
 

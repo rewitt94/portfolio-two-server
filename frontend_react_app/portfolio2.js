@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 31);
+/******/ 	return __webpack_require__(__webpack_require__.s = 30);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -261,9 +261,9 @@ process.umask = function() { return 0; };
 /* WEBPACK VAR INJECTION */(function(process) {
 
 if (process.env.NODE_ENV === 'production') {
-  module.exports = __webpack_require__(32);
+  module.exports = __webpack_require__(31);
 } else {
-  module.exports = __webpack_require__(33);
+  module.exports = __webpack_require__(32);
 }
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
@@ -307,9 +307,9 @@ if (process.env.NODE_ENV === 'production') {
   // DCE check should happen before ReactDOM bundle executes so that
   // DevTools can report bad minification during injection.
   checkDCE();
-  module.exports = __webpack_require__(35);
+  module.exports = __webpack_require__(34);
 } else {
-  module.exports = __webpack_require__(38);
+  module.exports = __webpack_require__(37);
 }
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
@@ -453,7 +453,7 @@ var singleton = null;
 var	singletonCounter = 0;
 var	stylesInsertedAtTop = [];
 
-var	fixUrls = __webpack_require__(45);
+var	fixUrls = __webpack_require__(44);
 
 module.exports = function(list, options) {
 	if (typeof DEBUG !== "undefined" && DEBUG) {
@@ -838,11 +838,9 @@ var _coding = __webpack_require__(19);
 
 var _projects = __webpack_require__(20);
 
-var _myself = __webpack_require__(21);
+var _CV = __webpack_require__(21);
 
-var _CV = __webpack_require__(22);
-
-var _copyright = __webpack_require__(30);
+var _copyright = __webpack_require__(29);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -990,17 +988,6 @@ var Top = exports.Top = function (_React$Component) {
               'h1',
               null,
               'My CV'
-            )
-          ),
-          _react2.default.createElement(
-            'div',
-            { onClick: function onClick() {
-                return _this4.props.goPage(_myself.Myself);
-              } },
-            _react2.default.createElement(
-              'h1',
-              null,
-              'My Self'
             )
           ),
           _react2.default.createElement(
@@ -1336,7 +1323,7 @@ module.exports = warning;
 if (process.env.NODE_ENV !== 'production') {
   var invariant = __webpack_require__(9);
   var warning = __webpack_require__(10);
-  var ReactPropTypesSecret = __webpack_require__(34);
+  var ReactPropTypesSecret = __webpack_require__(33);
   var loggedTypeFailures = {};
 }
 
@@ -1635,7 +1622,7 @@ module.exports = shallowEqual;
  * 
  */
 
-var isTextNode = __webpack_require__(36);
+var isTextNode = __webpack_require__(35);
 
 /*eslint-disable no-bitwise */
 
@@ -1720,11 +1707,9 @@ var _coding = __webpack_require__(19);
 
 var _projects = __webpack_require__(20);
 
-var _myself = __webpack_require__(21);
+var _CV = __webpack_require__(21);
 
-var _CV = __webpack_require__(22);
-
-var _copyright = __webpack_require__(30);
+var _copyright = __webpack_require__(29);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -1765,9 +1750,9 @@ var Widget = function (_React$Component) {
         class: "imagination_header"
       }, {
 
-        image: "https://images.unsplash.com/photo-1456139456319-352002cddddd?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=184e54e50d22c67de464e7c04856503a&auto=format&fit=crop&w=1651&q=80",
-        text: "Problem-solving",
-        class: "problem_solving_header"
+        image: "https://images.unsplash.com/photo-1499560470475-3c75b259add8?ixlib=rb-0.3.5&s=b10eef701c6afbfd8e35ac53e6ce48f6&auto=format&fit=crop&w=2850&q=80",
+        text: "Determination",
+        class: "determination_header"
       }, {
         image: "https://images.unsplash.com/photo-1505238680356-667803448bb6?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=d39fe8df8ff9407562e2f89aec3c1318&auto=format&fit=crop&w=1650&q=80",
         text: "Pursuit of Knowledge",
@@ -1861,11 +1846,6 @@ var HomeBox = function (_React$Component2) {
           ),
           _react2.default.createElement('hr', null),
           _react2.default.createElement('br', null),
-          _react2.default.createElement(
-            'h2',
-            { style: { textAlign: 'center', fontSize: '20px' } },
-            'I am a Junior Dev seeking my first job in tech.'
-          ),
           _react2.default.createElement(
             'p',
             { style: { textAlign: 'center', fontSize: '20px' } },
@@ -1978,7 +1958,7 @@ var HomeBox = function (_React$Component2) {
                 _react2.default.createElement(
                   'p',
                   null,
-                  'Please feel free to put yourself in contact with me.'
+                  'Please view the copyright of used images here.'
                 )
               ),
               _react2.default.createElement(
@@ -1987,30 +1967,12 @@ var HomeBox = function (_React$Component2) {
                 _react2.default.createElement(
                   'button',
                   { className: 'home_button', onClick: function onClick() {
-                      return _this4.props.goPage(_myself.Myself);
+                      return _this4.props.goPage(_copyright.Copyright);
                     } },
-                  'My Self'
+                  'Copyright'
                 )
               )
             )
-          )
-        ),
-        _react2.default.createElement(
-          'div',
-          { className: 'home_copyright' },
-          _react2.default.createElement('hr', null),
-          _react2.default.createElement(
-            'h1',
-            null,
-            'See copyright of images ',
-            _react2.default.createElement(
-              'span',
-              { onClick: function onClick() {
-                  return _this4.props.goPage(_copyright.Copyright);
-                } },
-              'here'
-            ),
-            '.'
           )
         ),
         _react2.default.createElement(_navbars.Bottom, null)
@@ -2680,15 +2642,199 @@ var Projects = exports.Projects = function (_React$Component) {
               _react2.default.createElement(
                 'span',
                 null,
-                'my coding projects'
+                'my projects at Makers Academy'
               ),
               '.'
+            ),
+            _react2.default.createElement('br', null),
+            _react2.default.createElement(
+              'h3',
+              null,
+              'Having attended Makers Academy I have learnt to write to good quality. We strive to follow good practices. Including TDD, object orientated principles, work-flow and most importantly team work.'
             ),
             _react2.default.createElement('hr', null)
           ),
           _react2.default.createElement(
             'div',
             { className: 'project_row' },
+            _react2.default.createElement(
+              'div',
+              { className: 'project_title' },
+              _react2.default.createElement(
+                'h1',
+                null,
+                _react2.default.createElement(
+                  'span',
+                  null,
+                  'Testing Framework'
+                )
+              ),
+              _react2.default.createElement(
+                'button',
+                { onClick: function onClick() {
+                    var win = window.open('https://github.com/DrSerpent/DrSerpent-Core', '_blank');win.focus();
+                  } },
+                'GitHub Docs'
+              )
+            ),
+            _react2.default.createElement(
+              'div',
+              { className: 'project_description' },
+              _react2.default.createElement(
+                'h4',
+                null,
+                'Our final project at Makers Academy was to create a python tested framework. It is avaible on open source and tested in itself.'
+              )
+            )
+          ),
+          _react2.default.createElement(
+            'div',
+            { style: { flexDirection: 'row-reverse' }, className: 'project_row' },
+            _react2.default.createElement(
+              'div',
+              { className: 'project_title' },
+              _react2.default.createElement(
+                'h1',
+                null,
+                _react2.default.createElement(
+                  'span',
+                  null,
+                  'Bank'
+                )
+              ),
+              _react2.default.createElement(
+                'button',
+                { onClick: function onClick() {
+                    var win = window.open('https://github.com/rewitt94/bank', '_blank');win.focus();
+                  } },
+                'GitHub'
+              )
+            ),
+            _react2.default.createElement(
+              'div',
+              { className: 'project_description' },
+              _react2.default.createElement(
+                'h4',
+                null,
+                'A simple Bank tech-test programmed in new "hipster" language Rust.'
+              )
+            )
+          ),
+          _react2.default.createElement(
+            'div',
+            { className: 'project_row' },
+            _react2.default.createElement(
+              'div',
+              { className: 'project_title' },
+              _react2.default.createElement(
+                'h1',
+                null,
+                _react2.default.createElement(
+                  'span',
+                  null,
+                  'Acebook'
+                )
+              ),
+              _react2.default.createElement(
+                'button',
+                { onClick: function onClick() {
+                    var win = window.open('https://acebook-pinkfish.herokuapp.com/', '_blank');win.focus();
+                  } },
+                'Live App'
+              ),
+              _react2.default.createElement('br', null),
+              _react2.default.createElement(
+                'button',
+                { onClick: function onClick() {
+                    var win = window.open('https://github.com/Hemesh-Unka/acebook-pinkfish', '_blank');win.focus();
+                  } },
+                'GitHub'
+              ),
+              _react2.default.createElement('br', null),
+              _react2.default.createElement(
+                'button',
+                { onClick: function onClick() {
+                    var win = window.open('https://medium.com/team-pinkfish/day-two-ten-points-to-rubyclaw-eed520a989ef', '_blank');win.focus();
+                  } },
+                'Blog Post'
+              )
+            ),
+            _react2.default.createElement(
+              'div',
+              { className: 'project_description' },
+              _react2.default.createElement(
+                'h4',
+                null,
+                'A group project to build a facebook clone using Ruby on Rails.'
+              )
+            )
+          ),
+          _react2.default.createElement(
+            'div',
+            { className: 'project_page_header' },
+            _react2.default.createElement(
+              'h1',
+              null,
+              'Here are a selection of ',
+              _react2.default.createElement(
+                'span',
+                null,
+                'my personal coding projects'
+              ),
+              '.'
+            ),
+            _react2.default.createElement('br', null),
+            _react2.default.createElement(
+              'h3',
+              null,
+              'I started learning to code before Makers. These projects were more focused on product than process. It is Javascript from here on.'
+            ),
+            _react2.default.createElement('hr', null)
+          ),
+          _react2.default.createElement(
+            'div',
+            { className: 'project_row' },
+            _react2.default.createElement(
+              'div',
+              { className: 'project_title' },
+              _react2.default.createElement(
+                'h1',
+                null,
+                _react2.default.createElement(
+                  'span',
+                  null,
+                  'Bowling'
+                )
+              ),
+              _react2.default.createElement(
+                'button',
+                { onClick: function onClick() {
+                    var win = window.open('/bowling', '_blank');win.focus();
+                  } },
+                'Play now'
+              ),
+              _react2.default.createElement('br', null),
+              _react2.default.createElement(
+                'button',
+                { onClick: function onClick() {
+                    var win = window.open('/https://github.com/rewitt94/bowling', '_blank');win.focus();
+                  } },
+                'GitHub'
+              )
+            ),
+            _react2.default.createElement(
+              'div',
+              { className: 'project_description' },
+              _react2.default.createElement(
+                'h4',
+                null,
+                'An experiment with HTML canvas to make a functional bowling game.'
+              )
+            )
+          ),
+          _react2.default.createElement(
+            'div',
+            { style: { flexDirection: 'row-reverse' }, className: 'project_row' },
             _react2.default.createElement(
               'div',
               { className: 'project_title' },
@@ -2707,32 +2853,29 @@ var Projects = exports.Projects = function (_React$Component) {
                     var win = window.open('/reversi', '_blank');win.focus();
                   } },
                 'Play now'
+              ),
+              _react2.default.createElement('br', null),
+              _react2.default.createElement(
+                'button',
+                { onClick: function onClick() {
+                    var win = window.open('https://github.com/rewitt94/reversi', '_blank');win.focus();
+                  } },
+                'GitHub'
               )
             ),
             _react2.default.createElement(
               'div',
               { className: 'project_description' },
               _react2.default.createElement(
-                'p',
+                'h4',
                 null,
-                'A copy of the classic board game Reversi (Othello). Built with vanilla Javascript, HTML and CSS. Still in the early stages of development, but definitely functional as a splitscreen game. The code needs major encapsulation - take a look yourself ',
-                _react2.default.createElement(
-                  'span',
-                  { onClick: function onClick() {
-                      var win = window.open('https://github.com/rewitt94/reversi', '_blank');win.focus();
-                    } },
-                  'here'
-                ),
-                '. I hope to add a computer AI (and maybe an online multiplayer).',
-                _react2.default.createElement('br', null),
-                _react2.default.createElement('br', null),
-                'N.B. There is a known bug if there is no valid move, but this a very rare event in game.'
+                'A copy of the classic board game Reversi - also called Othello. Available split screen or via websocket. You need another human.'
               )
             )
           ),
           _react2.default.createElement(
             'div',
-            { style: { flexDirection: 'row-reverse' }, className: 'project_row' },
+            { className: 'project_row' },
             _react2.default.createElement(
               'div',
               { className: 'project_title' },
@@ -2744,37 +2887,36 @@ var Projects = exports.Projects = function (_React$Component) {
                   null,
                   'Portfolio v2'
                 )
+              ),
+              _react2.default.createElement(
+                'button',
+                { onClick: function onClick() {
+                    var win = window.open('https://github.com/rewitt94/portfolio-two-frontend', '_blank');win.focus();
+                  } },
+                'React App GitHub'
+              ),
+              _react2.default.createElement('br', null),
+              _react2.default.createElement(
+                'button',
+                { onClick: function onClick() {
+                    var win = window.open('https://github.com/rewitt94/portfolio-two-frontend', '_blank');win.focus();
+                  } },
+                'Server GitHub'
               )
             ),
             _react2.default.createElement(
               'div',
               { className: 'project_description' },
               _react2.default.createElement(
-                'p',
+                'h4',
                 null,
-                'This is the website that you are currently visiting. Click ',
-                _react2.default.createElement(
-                  'span',
-                  { onClick: function onClick() {
-                      var win = window.open('https://github.com/rewitt94/portfolio-two-server', '_blank');win.focus();
-                    } },
-                  'here'
-                ),
-                ' to view the back-end express server. Click ',
-                _react2.default.createElement(
-                  'span',
-                  { onClick: function onClick() {
-                      var win = window.open('https://github.com/rewitt94/portfolio-two-frontend', '_blank');win.focus();
-                    } },
-                  'here'
-                ),
-                ' to view the front-end React app which is webpack compiled and contains a Redux store. The website is compatible with mobile (it is compatible with varied screen sizes).'
+                'The website that you are currently visiting. There are seperate GitHub repositories for the React App and the repository that is hosted on AWS.'
               )
             )
           ),
           _react2.default.createElement(
             'div',
-            { className: 'project_row' },
+            { style: { flexDirection: 'row-reverse' }, className: 'project_row' },
             _react2.default.createElement(
               'div',
               { className: 'project_title' },
@@ -2793,60 +2935,23 @@ var Projects = exports.Projects = function (_React$Component) {
                     var win = window.open('/submarine', '_blank');win.focus();
                   } },
                 'Play now'
+              ),
+              _react2.default.createElement('br', null),
+              _react2.default.createElement(
+                'button',
+                { onClick: function onClick() {
+                    var win = window.open('https://github.com/rewitt94/submarine', '_blank');win.focus();
+                  } },
+                'GitHub'
               )
             ),
             _react2.default.createElement(
               'div',
               { className: 'project_description' },
               _react2.default.createElement(
-                'p',
+                'h4',
                 null,
-                'This was my first real programming acheivement. It is a game developed using entirely Javascript, HTML and CSS. The code is sloppy and not optimized. However, at the time I was completely thrilled with the result. You can see it ',
-                _react2.default.createElement(
-                  'span',
-                  { onClick: function onClick() {
-                      var win = window.open('https://github.com/rewitt94/submarine', '_blank');win.focus();
-                    } },
-                  'here'
-                ),
-                '. Have a play!',
-                _react2.default.createElement('br', null),
-                _react2.default.createElement('br', null),
-                'N.B. This game will not work on mobile.'
-              )
-            )
-          ),
-          _react2.default.createElement(
-            'div',
-            { style: { flexDirection: 'row-reverse' }, className: 'project_row' },
-            _react2.default.createElement(
-              'div',
-              { className: 'project_title' },
-              _react2.default.createElement(
-                'h1',
-                null,
-                _react2.default.createElement(
-                  'span',
-                  null,
-                  'Portfolio v1'
-                )
-              )
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'project_description' },
-              _react2.default.createElement(
-                'p',
-                null,
-                'This is a my original website. A back-end express serves up different html files. It is offline because the current website is vastly superior, but you can view the code ',
-                _react2.default.createElement(
-                  'span',
-                  { onClick: function onClick() {
-                      var win = window.open('https://github.com/rewitt94/portfolio', '_blank');win.focus();
-                    } },
-                  'here'
-                ),
-                '. I have included this project to see the progression from my first website to the second.'
+                'This was my first real programming acheivement.'
               )
             )
           )
@@ -2869,78 +2974,6 @@ var Projects = exports.Projects = function (_React$Component) {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.Myself = undefined;
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(1);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactDom = __webpack_require__(2);
-
-var _reactDom2 = _interopRequireDefault(_reactDom);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var Myself = exports.Myself = function (_React$Component) {
-  _inherits(Myself, _React$Component);
-
-  function Myself() {
-    _classCallCheck(this, Myself);
-
-    return _possibleConstructorReturn(this, (Myself.__proto__ || Object.getPrototypeOf(Myself)).apply(this, arguments));
-  }
-
-  _createClass(Myself, [{
-    key: 'render',
-    value: function render() {
-      return _react2.default.createElement(
-        'div',
-        null,
-        _react2.default.createElement(
-          'h1',
-          null,
-          'oi'
-        ),
-        _react2.default.createElement(
-          'h1',
-          null,
-          'oi'
-        ),
-        _react2.default.createElement(
-          'h1',
-          null,
-          'oi'
-        ),
-        _react2.default.createElement(
-          'h1',
-          null,
-          'contact'
-        )
-      );
-    }
-  }]);
-
-  return Myself;
-}(_react2.default.Component);
-
-/***/ }),
-/* 22 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
 exports.CV = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -2955,9 +2988,9 @@ var _reactDom2 = _interopRequireDefault(_reactDom);
 
 var _navbars = __webpack_require__(6);
 
-var _redux = __webpack_require__(23);
+var _redux = __webpack_require__(22);
 
-var _index = __webpack_require__(72);
+var _index = __webpack_require__(71);
 
 var _index2 = _interopRequireDefault(_index);
 
@@ -2984,7 +3017,7 @@ var CV = exports.CV = function (_React$Component) {
       questionSelected: 0,
       questionAnswered: [null, null, null, null, null, null, null, null],
       order: [0, 1, 2],
-      questionInfo: [['I am 23 years old', 'I studied Maths at university', 'I built the Eiffel Tower', 'Ok, this is a practice one.', "Of course I didn't build the Eiffel Tower, but I do have it tattooed on my leg."], ['CIMA Certificate in Business Accounting', 'TEFL (Teaching English as a Foreign Language)', 'CIM Certificate in Professional Marketing', "I'm no stranger to online learning. Infact I have studied all of the following...", "Any junior dev is going to spend atleast half of their time looking for answers online. Atleast I'm used to it."], ['I have worked in Italy', 'I have worked in Spain', 'I have worked in Estonia', 'I like to consider myself a world citizen.', "I hope that wasn't too obvious. I did actually live in Estonia for four years as a kid."], ['Teaching', 'Hospitality', 'Health Care', "If you've read my CV you'll know I've worked in all of the following...", "I haven't saved any lives... yet."], ['I had a topknot', 'I built an igloo and slept in it', 'I was on a cereal commercial', "Since we're getting acquanted, how about a silly one?", "I actually prefer musli."], ['University of Bristol Student Leadership', 'Reigate Grammar School 6th Form Physics', 'Royal Victoria Poetry Competition', 'I have won a couple awards. Which of the following have I (alone or part of a team) won.', "Roses are red. violets are blue. I'm good at poetry. That is not true."], ['I write', 'I run', 'I sing', "Maybe if we have a hobby in common you'll want to hire me...", "You don't want to hear me sing."], ['React', 'Ruby', 'C#', "How about a programming related one. I have worked with all of the following...", "I haven't had the chance to learn C# yet!"]]
+      questionInfo: [['I am 24 years old', 'I studied Maths at university', 'I built the Eiffel Tower', 'Ok, this is a practice one.', "Of course I didn't build the Eiffel Tower, but I do have it tattooed on my leg."], ['CIMA Certificate in Business Accounting', 'TEFL (Teaching English as a Foreign Language)', 'CIM Certificate in Professional Marketing', "I'm no stranger to online learning. Infact I have studied all of the following...", "Any junior dev is going to spend atleast half of their time looking for answers online. Atleast I'm used to it."], ['I have worked in Italy', 'I have worked in Spain', 'I have worked in Estonia', 'I like to consider myself a world citizen.', "I hope that wasn't too obvious. I did actually live in Estonia for four years as a kid."], ['Teaching', 'Hospitality', 'Health Care', "If you've read my CV you'll know I've worked in all of the following...", "I haven't saved any lives... yet."], ['I had a topknot', 'I built an igloo and slept in it', 'I was on a cereal commercial', "Since we're getting acquanted, how about a silly one?", "I actually prefer musli."], ['University of Bristol Student Leadership', 'Reigate Grammar School 6th Form Physics', 'Royal Victoria Poetry Competition', 'I have won a couple awards. Which of the following have I (alone or part of a team) won.', "Roses are red. violets are blue. I'm good at poetry. That is not true."], ['I write', 'I run', 'I sing', "Maybe if we have a hobby in common you'll want to hire me...", "You don't want to hear me sing."], ['React', 'Ruby', 'C#', "How about a programming related one. I have worked with all of the following...", "I haven't had the chance to learn C# yet!"]]
     };
     return _this;
   }
@@ -3273,17 +3306,17 @@ var CV = exports.CV = function (_React$Component) {
 }(_react2.default.Component);
 
 /***/ }),
-/* 23 */
+/* 22 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__createStore__ = __webpack_require__(24);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__combineReducers__ = __webpack_require__(69);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__bindActionCreators__ = __webpack_require__(70);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__applyMiddleware__ = __webpack_require__(71);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__compose__ = __webpack_require__(29);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__utils_warning__ = __webpack_require__(28);
+/* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__createStore__ = __webpack_require__(23);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__combineReducers__ = __webpack_require__(68);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__bindActionCreators__ = __webpack_require__(69);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__applyMiddleware__ = __webpack_require__(70);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__compose__ = __webpack_require__(28);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__utils_warning__ = __webpack_require__(27);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "createStore", function() { return __WEBPACK_IMPORTED_MODULE_0__createStore__["b"]; });
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "combineReducers", function() { return __WEBPACK_IMPORTED_MODULE_1__combineReducers__["a"]; });
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "bindActionCreators", function() { return __WEBPACK_IMPORTED_MODULE_2__bindActionCreators__["a"]; });
@@ -3310,14 +3343,14 @@ if (process.env.NODE_ENV !== 'production' && typeof isCrushed.name === 'string' 
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
 
 /***/ }),
-/* 24 */
+/* 23 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ActionTypes; });
 /* harmony export (immutable) */ __webpack_exports__["b"] = createStore;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash_es_isPlainObject__ = __webpack_require__(25);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_symbol_observable__ = __webpack_require__(66);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash_es_isPlainObject__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_symbol_observable__ = __webpack_require__(65);
 
 
 
@@ -3568,13 +3601,13 @@ var ActionTypes = {
 }
 
 /***/ }),
-/* 25 */
+/* 24 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__baseGetTag_js__ = __webpack_require__(58);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__getPrototype_js__ = __webpack_require__(63);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__isObjectLike_js__ = __webpack_require__(65);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__baseGetTag_js__ = __webpack_require__(57);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__getPrototype_js__ = __webpack_require__(62);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__isObjectLike_js__ = __webpack_require__(64);
 
 
 
@@ -3640,11 +3673,11 @@ function isPlainObject(value) {
 
 
 /***/ }),
-/* 26 */
+/* 25 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__root_js__ = __webpack_require__(59);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__root_js__ = __webpack_require__(58);
 
 
 /** Built-in value references. */
@@ -3654,7 +3687,7 @@ var Symbol = __WEBPACK_IMPORTED_MODULE_0__root_js__["a" /* default */].Symbol;
 
 
 /***/ }),
-/* 27 */
+/* 26 */
 /***/ (function(module, exports) {
 
 var g;
@@ -3681,7 +3714,7 @@ module.exports = g;
 
 
 /***/ }),
-/* 28 */
+/* 27 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3709,7 +3742,7 @@ function warning(message) {
 }
 
 /***/ }),
-/* 29 */
+/* 28 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3748,7 +3781,7 @@ function compose() {
 }
 
 /***/ }),
-/* 30 */
+/* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3859,7 +3892,7 @@ var Copyright = exports.Copyright = function (_React$Component) {
               _react2.default.createElement(
                 'div',
                 null,
-                _react2.default.createElement('img', { src: 'https://images.unsplash.com/photo-1456139456319-352002cddddd?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=184e54e50d22c67de464e7c04856503a&auto=format&fit=crop&w=1651&q=80' })
+                _react2.default.createElement('img', { src: 'https://images.unsplash.com/photo-1499560470475-3c75b259add8?ixlib=rb-0.3.5&s=b10eef701c6afbfd8e35ac53e6ce48f6&auto=format&fit=crop&w=2850&q=80' })
               ),
               _react2.default.createElement(
                 'div',
@@ -3898,9 +3931,7 @@ var Copyright = exports.Copyright = function (_React$Component) {
             _react2.default.createElement(
               'div',
               { className: 'copyright_img' },
-              _react2.default.createElement('img', { src: 'http://www.clker.com/cliparts/E/C/O/z/A/T/swirl-hi.png',
-                style: night ? { filter: 'invert(100)' } : {}
-              })
+              _react2.default.createElement('img', { src: 'http://www.clker.com/cliparts/E/C/O/z/A/T/swirl-hi.png', style: night ? { filter: 'invert(100)' } : {} })
             ),
             _react2.default.createElement(
               'div',
@@ -3923,9 +3954,7 @@ var Copyright = exports.Copyright = function (_React$Component) {
             _react2.default.createElement(
               'div',
               { className: 'copyright_img' },
-              _react2.default.createElement('img', { src: 'https://maxcdn.icons8.com/Share/icon/Arrows//right_down21600.png',
-                style: night ? { filter: 'invert(100)' } : {}
-              })
+              _react2.default.createElement('img', { src: 'https://maxcdn.icons8.com/Share/icon/Arrows//right_down21600.png', style: night ? { filter: 'invert(100)' } : {} })
             ),
             _react2.default.createElement(
               'div',
@@ -3948,9 +3977,7 @@ var Copyright = exports.Copyright = function (_React$Component) {
             _react2.default.createElement(
               'div',
               { className: 'copyright_img' },
-              _react2.default.createElement('img', { src: 'http://laoblogger.com/images/first-quarter-moon-clipart-1.jpg',
-                style: night ? { filter: 'invert(100)' } : {}
-              })
+              _react2.default.createElement('img', { src: 'http://laoblogger.com/images/first-quarter-moon-clipart-1.jpg', style: night ? { filter: 'invert(100)' } : {} })
             ),
             _react2.default.createElement(
               'div',
@@ -3973,9 +4000,7 @@ var Copyright = exports.Copyright = function (_React$Component) {
             _react2.default.createElement(
               'div',
               { className: 'copyright_img' },
-              _react2.default.createElement('img', { src: 'http://images.clipartpanda.com/home-clip-art-KTnqkGjTq.png',
-                style: night ? { filter: 'invert(100)' } : {}
-              })
+              _react2.default.createElement('img', { src: 'http://images.clipartpanda.com/home-clip-art-KTnqkGjTq.png', style: night ? { filter: 'invert(100)' } : {} })
             ),
             _react2.default.createElement(
               'div',
@@ -3998,9 +4023,7 @@ var Copyright = exports.Copyright = function (_React$Component) {
             _react2.default.createElement(
               'div',
               { className: 'copyright_img' },
-              _react2.default.createElement('img', { src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/1200px-Hamburger_icon.svg.png',
-                style: night ? { filter: 'invert(100)' } : {}
-              })
+              _react2.default.createElement('img', { src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/1200px-Hamburger_icon.svg.png', style: night ? { filter: 'invert(100)' } : {} })
             ),
             _react2.default.createElement(
               'div',
@@ -4101,8 +4124,7 @@ var Copyright = exports.Copyright = function (_React$Component) {
             _react2.default.createElement(
               'div',
               { className: 'copyright_sub_img' },
-              _react2.default.createElement('img', { src: 'http://images.clipartpanda.com/missile-clipart-missile.png'
-              })
+              _react2.default.createElement('img', { src: 'http://images.clipartpanda.com/missile-clipart-missile.png' })
             ),
             _react2.default.createElement(
               'div',
@@ -4152,7 +4174,7 @@ var Copyright = exports.Copyright = function (_React$Component) {
 }(_react2.default.Component);
 
 /***/ }),
-/* 31 */
+/* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4168,19 +4190,19 @@ var _reactDom = __webpack_require__(2);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-__webpack_require__(43);
+__webpack_require__(42);
 
-__webpack_require__(46);
+__webpack_require__(45);
 
-__webpack_require__(48);
+__webpack_require__(47);
 
-__webpack_require__(50);
+__webpack_require__(49);
 
-__webpack_require__(52);
+__webpack_require__(51);
 
-__webpack_require__(54);
+__webpack_require__(53);
 
-__webpack_require__(56);
+__webpack_require__(55);
 
 var _home = __webpack_require__(18);
 
@@ -4244,7 +4266,7 @@ var App = function (_React$Component) {
 _reactDom2.default.render(_react2.default.createElement(App, null), document.body);
 
 /***/ }),
-/* 32 */
+/* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4272,7 +4294,7 @@ isValidElement:K,version:"16.2.0",__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_F
 
 
 /***/ }),
-/* 33 */
+/* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5637,7 +5659,7 @@ module.exports = react;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 34 */
+/* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5656,7 +5678,7 @@ module.exports = ReactPropTypesSecret;
 
 
 /***/ }),
-/* 35 */
+/* 34 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5892,7 +5914,7 @@ Z.injectIntoDevTools({findFiberByHostInstance:pb,bundleType:0,version:"16.2.0",r
 
 
 /***/ }),
-/* 36 */
+/* 35 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5907,7 +5929,7 @@ Z.injectIntoDevTools({findFiberByHostInstance:pb,bundleType:0,version:"16.2.0",r
  * @typechecks
  */
 
-var isNode = __webpack_require__(37);
+var isNode = __webpack_require__(36);
 
 /**
  * @param {*} object The object to check.
@@ -5920,7 +5942,7 @@ function isTextNode(object) {
 module.exports = isTextNode;
 
 /***/ }),
-/* 37 */
+/* 36 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5948,7 +5970,7 @@ function isNode(object) {
 module.exports = isNode;
 
 /***/ }),
-/* 38 */
+/* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5982,8 +6004,8 @@ var containsNode = __webpack_require__(16);
 var focusNode = __webpack_require__(17);
 var emptyObject = __webpack_require__(8);
 var checkPropTypes = __webpack_require__(11);
-var hyphenateStyleName = __webpack_require__(39);
-var camelizeStyleName = __webpack_require__(41);
+var hyphenateStyleName = __webpack_require__(38);
+var camelizeStyleName = __webpack_require__(40);
 
 /**
  * WARNING: DO NOT manually require this module.
@@ -21350,7 +21372,7 @@ module.exports = reactDom;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 39 */
+/* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21365,7 +21387,7 @@ module.exports = reactDom;
 
 
 
-var hyphenate = __webpack_require__(40);
+var hyphenate = __webpack_require__(39);
 
 var msPattern = /^ms-/;
 
@@ -21392,7 +21414,7 @@ function hyphenateStyleName(string) {
 module.exports = hyphenateStyleName;
 
 /***/ }),
-/* 40 */
+/* 39 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21428,7 +21450,7 @@ function hyphenate(string) {
 module.exports = hyphenate;
 
 /***/ }),
-/* 41 */
+/* 40 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21443,7 +21465,7 @@ module.exports = hyphenate;
 
 
 
-var camelize = __webpack_require__(42);
+var camelize = __webpack_require__(41);
 
 var msPattern = /^-ms-/;
 
@@ -21471,7 +21493,7 @@ function camelizeStyleName(string) {
 module.exports = camelizeStyleName;
 
 /***/ }),
-/* 42 */
+/* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21506,13 +21528,13 @@ function camelize(string) {
 module.exports = camelize;
 
 /***/ }),
-/* 43 */
+/* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(44);
+var content = __webpack_require__(43);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -21537,7 +21559,7 @@ if(false) {
 }
 
 /***/ }),
-/* 44 */
+/* 43 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(3)(false);
@@ -21545,13 +21567,13 @@ exports = module.exports = __webpack_require__(3)(false);
 
 
 // module
-exports.push([module.i, "@font-face {\n    font-family: 'Berkshire Swash';\n    src: url('https://fonts.googleapis.com/css?family=Berkshire+Swash');\n}\n\n@font-face {\n  font-family: 'Sedgwick Ave', cursive;\n  src: url('https://fonts.googleapis.com/css?family=Sedgwick+Ave');\n}\n\n::-webkit-scrollbar {\n    display: none;\n}\n\nbody {\n  background: rgb(255, 255, 242);\n  margin: 0;\n  font-family: serif;\n  overflow: hidden; /*this isn't working?*/\n}\n\nh1 {\n  margin: 0;\n}\n\np {\n  margin: 0;\n}\n\nimg {\n  width:100%;\n}\n\nspan {\n  color: #EE2C73;\n}\n\n.night span {\n  color: tan;\n}\n\n.root {\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  overflow-y: auto;\n  overflow-x: hidden;\n}\n\n.image_box {\n  top: 50px;\n  z-index: 1;\n  position: absolute;\n  width: 100vw;\n}\n\n.creativity_header {\n  z-index: 2;\n  position: absolute;\n  width: 80vw;\n  font-size: 8vw;\n  font-family: 'Berkshire Swash', cursive;\n  color: rgb(55, 79, 54);\n  text-align: right;\n}\n\n.logic_header {\n  z-index: 2;\n  position: absolute;\n  top: 36vw;\n  right: 11vw;\n  font-size: 5vw;\n  color: orange;\n}\n\n.interest_header {\n  z-index: 2;\n  position: absolute;\n  top: 18vw;\n  width: 100vw;\n  font-size: 12vw;\n  color: rgb(194, 35, 17);\n  text-align: center;\n  font-family: arial;\n}\n\n.imagination_header {\n  z-index: 2;\n  position: absolute;\n  top:22vw;\n  left:6vw;\n  font-size: 12vw;\n  font-family: 'Berkshire Swash';\n  color: tan;\n}\n\n.problem_solving_header {\n  z-index: 2;\n  position: absolute;\n  width: 100vw;\n  font-size: 8vw;\n  color: orange;\n  text-align: right;\n  font-family: 'Sedgwick Ave', cursive;\n}\n\n.pusuit_of_knowledge_header {\n  z-index: 2;\n  position: absolute;\n  width: 100vw;\n  top: 2vw;\n  font-size: 4.5vw;\n  color: white;\n  text-align: center;\n  font-family: monospace;\n}\n\n.left_down_arrow {\n  z-index: 4;\n  position: absolute;\n  left: 78vw;\n  top: 15vw;\n  width:22vw;\n}\n\n.left_down_arrow:hover {\n  opacity: 0.5;\n  cursor: pointer;\n}\n\n.home_box {\n  background-color: rgb(255, 255, 242);\n  width: 100vw;\n  position: absolute;\n  top: 99.6vh;\n  z-index: 2;\n  border-top-style: solid;\n  border-width: thick;\n}\n\n.welcome_box {\n  position: relative;\n  width: 80%;\n  left: 10%;\n  margin-bottom: 100px;\n}\n\n.welcome_clipart {\n  position: relative;\n  left: 45%;\n  width:10%;\n  margin-top: 80px;\n}\n\n.home_wrapper {\n  height: 700px;\n  display: flex;\n  flex-wrap: wrap;\n  flex-direction: row;\n}\n\n.home_wrapper > div {\n  position: relative;\n  display: flex;\n  flex-basis: calc(50%);\n  align-content: center;\n  flex-direction: column;\n}\n\n.home_wrapper > div > div {\n  background-color: rgb(230, 230, 220);\n  border-style: solid;\n  border-width: thick;\n  border-radius: 5%;\n  align-self: center;\n  width: 80%;\n  height: 80%;\n  text-align: center;\n}\n\n.home_wrapper button:hover {\n  color: #EE2C73;\n  cursor: pointer;\n}\n\n.night .home_wrapper button:hover {\n  color: tan;\n  cursor: pointer;\n}\n\n.night .home_wrapper > div > div {\n  background-color: rgb(20, 20, 25);\n}\n\n.home_paragraph_div {\n  position: relative;\n  font-size: 2vw;\n  top: 25%;\n  left: 10%;\n  height: 60%;\n  width: 80%;\n}\n\n.home_button_div {\n  position: relative;\n  min-height: 30%;\n}\n\n.home_button {\n  border-style: solid;\n  border-width: thick;\n  border-color: black;\n  position: relative;\n  height: 60px;\n  width: 20vw;\n  font-size: 2vw;\n  background: transparent;\n  font-weight: bold;\n  font-family: serif;\n}\n\n.night .home_button {\n  border-color: white;\n  color: white;\n}\n\n.home_copyright {\n  font-family: cursive;\n  font-size: 13px;\n  position: relative;\n  left:10%;\n  width:80%;\n  height:100px;\n  margin-top: 50px;\n  text-align: center;\n}\n\n@media screen and (max-width: 1008px) {\n  .home_box {\n    top: 71.5vw;\n  }\n  .left_down_arrow {\n    visibility: hidden;\n  }\n}\n\n@media screen and (max-width: 1100px) {\n  .home_paragraph_div {\n    font-size: 3.2vw;\n    top: 10%;\n  }\n}\n\n@media screen and (max-width: 700px) {\n  .bottom {\n    color: black;\n  }\n  .welcome_clipart {\n    left: 38%;\n    width: 24%;\n  }\n  .home_wrapper {\n    flex-direction: column;\n    height: 1050px;\n  }\n  .home_wrapper > div {\n    flex-basis: calc(25%);\n  }\n  .home_paragraph_div {\n    font-size: 4.8vw;\n    height: 65%;\n  }\n  .home_button {\n    min-height: 20%;\n    width: 40vw;\n    font-size: 3.8vw;\n  }\n}\n\n@media screen and (max-width: 500px) {\n  .home_paragraph_div {\n    font-size: 7vw;\n  }\n}\n", ""]);
+exports.push([module.i, "@font-face {\n    font-family: 'Berkshire Swash';\n    src: url('https://fonts.googleapis.com/css?family=Berkshire+Swash');\n}\n\n@font-face {\n  font-family: 'Sedgwick Ave', cursive;\n  src: url('https://fonts.googleapis.com/css?family=Sedgwick+Ave');\n}\n\n::-webkit-scrollbar {\n    display: none;\n}\n\nbody {\n  background: rgb(255, 255, 242);\n  margin: 0;\n  font-family: serif;\n  overflow: hidden; /*this isn't working?*/\n}\n\nh1 {\n  margin: 0;\n}\n\np {\n  margin: 0;\n}\n\nimg {\n  width:100%;\n}\n\nspan {\n  color: #EE2C73;\n}\n\n.night span {\n  color: tan;\n}\n\n.root {\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  overflow-y: auto;\n  overflow-x: hidden;\n}\n\n.image_box {\n  top: 50px;\n  z-index: 1;\n  position: absolute;\n  width: 100vw;\n}\n\n.creativity_header {\n  z-index: 2;\n  position: absolute;\n  width: 80vw;\n  font-size: 8vw;\n  font-family: 'Berkshire Swash', cursive;\n  color: rgb(55, 79, 54);\n  text-align: right;\n}\n\n.logic_header {\n  z-index: 2;\n  position: absolute;\n  top: 36vw;\n  right: 11vw;\n  font-size: 5vw;\n  color: orange;\n}\n\n.interest_header {\n  z-index: 2;\n  position: absolute;\n  top: 18vw;\n  width: 100vw;\n  font-size: 12vw;\n  color: rgb(194, 35, 17);\n  text-align: center;\n  font-family: arial;\n}\n\n.imagination_header {\n  z-index: 2;\n  position: absolute;\n  top:22vw;\n  left:6vw;\n  font-size: 12vw;\n  font-family: 'Berkshire Swash';\n  color: tan;\n}\n\n.determination_header {\n  z-index: 2;\n  position: absolute;\n  width: 100vw;\n  font-size: 4vw;\n  color: orange;\n  top: 2vw;\n  left: 2vw;\n  font-family: 'Sedgwick Ave', cursive;\n}\n\n.pusuit_of_knowledge_header {\n  z-index: 2;\n  position: absolute;\n  width: 100vw;\n  top: 2vw;\n  font-size: 4.5vw;\n  color: white;\n  text-align: center;\n  font-family: monospace;\n}\n\n.left_down_arrow {\n  z-index: 4;\n  position: absolute;\n  left: 78vw;\n  top: 15vw;\n  width:22vw;\n}\n\n.left_down_arrow:hover {\n  opacity: 0.5;\n  cursor: pointer;\n}\n\n.home_box {\n  background-color: rgb(255, 255, 242);\n  width: 100vw;\n  position: absolute;\n  top: 99.6vh;\n  z-index: 2;\n  border-top-style: solid;\n  border-width: thick;\n}\n\n.welcome_box {\n  position: relative;\n  width: 80%;\n  left: 10%;\n  margin-bottom: 100px;\n}\n\n.welcome_clipart {\n  position: relative;\n  left: 45%;\n  width:10%;\n  margin-top: 80px;\n}\n\n.home_wrapper {\n  height: 700px;\n  display: flex;\n  flex-wrap: wrap;\n  flex-direction: row;\n}\n\n.home_wrapper > div {\n  position: relative;\n  display: flex;\n  flex-basis: calc(50%);\n  align-content: center;\n  flex-direction: column;\n}\n\n.home_wrapper > div > div {\n  background-color: rgb(230, 230, 220);\n  border-style: solid;\n  border-width: thick;\n  border-radius: 5%;\n  align-self: center;\n  width: 80%;\n  height: 80%;\n  text-align: center;\n}\n\n.home_wrapper button:hover {\n  color: #EE2C73;\n  cursor: pointer;\n}\n\n.night .home_wrapper button:hover {\n  color: tan;\n  cursor: pointer;\n}\n\n.night .home_wrapper > div > div {\n  background-color: rgb(20, 20, 25);\n}\n\n.home_paragraph_div {\n  position: relative;\n  font-size: 2vw;\n  top: 25%;\n  left: 10%;\n  height: 60%;\n  width: 80%;\n}\n\n.home_button_div {\n  position: relative;\n  min-height: 30%;\n}\n\n.home_button {\n  border-style: solid;\n  border-width: thick;\n  border-color: black;\n  position: relative;\n  height: 60px;\n  width: 20vw;\n  font-size: 2vw;\n  background: transparent;\n  font-weight: bold;\n  font-family: serif;\n}\n\n.night .home_button {\n  border-color: white;\n  color: white;\n}\n\n.home_copyright {\n  font-family: cursive;\n  font-size: 13px;\n  position: relative;\n  left:10%;\n  width:80%;\n  height:100px;\n  margin-top: 50px;\n  text-align: center;\n}\n\n@media screen and (max-width: 1008px) {\n  .home_box {\n    top: 71.5vw;\n  }\n  .left_down_arrow {\n    visibility: hidden;\n  }\n}\n\n@media screen and (max-width: 1100px) {\n  .home_paragraph_div {\n    font-size: 3.2vw;\n    top: 10%;\n  }\n}\n\n@media screen and (max-width: 700px) {\n  .bottom {\n    color: black;\n  }\n  .welcome_clipart {\n    left: 38%;\n    width: 24%;\n  }\n  .home_wrapper {\n    flex-direction: column;\n    height: 1050px;\n  }\n  .home_wrapper > div {\n    flex-basis: calc(25%);\n  }\n  .home_paragraph_div {\n    font-size: 4.8vw;\n    height: 65%;\n  }\n  .home_button {\n    min-height: 20%;\n    width: 40vw;\n    font-size: 3.8vw;\n  }\n}\n\n@media screen and (max-width: 500px) {\n  .home_paragraph_div {\n    font-size: 7vw;\n  }\n}\n", ""]);
 
 // exports
 
 
 /***/ }),
-/* 45 */
+/* 44 */
 /***/ (function(module, exports) {
 
 
@@ -21646,13 +21668,13 @@ module.exports = function (css) {
 
 
 /***/ }),
-/* 46 */
+/* 45 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(47);
+var content = __webpack_require__(46);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -21677,7 +21699,7 @@ if(false) {
 }
 
 /***/ }),
-/* 47 */
+/* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(3)(false);
@@ -21691,13 +21713,13 @@ exports.push([module.i, ".coding_box {\n  position: relative;\n  padding-top: 50
 
 
 /***/ }),
-/* 48 */
+/* 47 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(49);
+var content = __webpack_require__(48);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -21722,7 +21744,7 @@ if(false) {
 }
 
 /***/ }),
-/* 49 */
+/* 48 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(3)(false);
@@ -21736,13 +21758,13 @@ exports.push([module.i, ".top {\n  background-color: rgb(255, 255, 242);\n  posi
 
 
 /***/ }),
-/* 50 */
+/* 49 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(51);
+var content = __webpack_require__(50);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -21767,7 +21789,7 @@ if(false) {
 }
 
 /***/ }),
-/* 51 */
+/* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(3)(false);
@@ -21775,19 +21797,19 @@ exports = module.exports = __webpack_require__(3)(false);
 
 
 // module
-exports.push([module.i, ".project_box {\n  position: relative;\n  padding-top: 50px;\n  padding-bottom: 200px;\n}\n\n.night .project_box {\n  background-color: rgb(41, 41, 48);\n  color: white;\n}\n\n.night button {\n  color: white;\n}\n\n.project_page_header {\n  position: relative;\n  text-align: center;\n  margin-top: 200px;\n  width: 60%;\n  left: 20%;\n}\n\n.project_row {\n  position: relative;\n  display: flex;\n  margin-top: 180px;\n  text-align: center;\n}\n\n.project_title{\n  font-family: cursive;\n  text-align: center;\n  width: 30%;\n}\n\n.project_title > button {\n  background-color: transparent;\n  border-radius: 30%;\n  font-size: 18px;\n}\n\n.project_description {\n  width: 70%;\n  font-size: 18px;\n}\n\n.project_description > p {\n  margin-left: 10%;\n  margin-right: 10%;\n}\n\n@media screen and (max-width: 700px) {\n  .project_row {\n    display: block;\n  }\n  .project_title {\n    width:100%;\n    margin-bottom: 50px;\n  }\n  .project_description {\n    width:100%;\n  }\n}\n", ""]);
+exports.push([module.i, ".project_box {\n  position: relative;\n  padding-top: 50px;\n  padding-bottom: 200px;\n}\n\n.night .project_box {\n  background-color: rgb(41, 41, 48);\n  color: white;\n}\n\n.night button {\n  color: white;\n}\n\n.project_page_header {\n  position: relative;\n  text-align: center;\n  margin-top: 200px;\n  width: 60%;\n  left: 20%;\n}\n\n.project_row {\n  position: relative;\n  display: flex;\n  margin-top: 180px;\n  text-align: center;\n}\n\n.project_title{\n  font-family: cursive;\n  text-align: center;\n  width: 30%;\n}\n\n.project_title > button {\n  background-color: transparent;\n  border-radius: 30%;\n  font-size: 18px;\n  margin-bottom: 10px;\n}\n\n.project_description {\n  width: 70%;\n  font-size: 18px;\n}\n\n.project_description > h4 {\n  margin-top: 50px;\n  margin-left: 10%;\n  margin-right: 10%;\n}\n\n@media screen and (max-width: 700px) {\n  .project_row {\n    display: block;\n  }\n  .project_title {\n    width:100%;\n    margin-bottom: 50px;\n  }\n  .project_description {\n    width:100%;\n  }\n}\n", ""]);
 
 // exports
 
 
 /***/ }),
-/* 52 */
+/* 51 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(53);
+var content = __webpack_require__(52);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -21812,7 +21834,7 @@ if(false) {
 }
 
 /***/ }),
-/* 53 */
+/* 52 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(3)(false);
@@ -21826,13 +21848,13 @@ exports.push([module.i, ".CV_box {\n  position: relative;\n  padding-top: 50px;\
 
 
 /***/ }),
-/* 54 */
+/* 53 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(55);
+var content = __webpack_require__(54);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -21857,7 +21879,7 @@ if(false) {
 }
 
 /***/ }),
-/* 55 */
+/* 54 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(3)(false);
@@ -21871,13 +21893,13 @@ exports.push([module.i, ".copyright_box {\n  position: relative;\n  padding-top:
 
 
 /***/ }),
-/* 56 */
+/* 55 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(57);
+var content = __webpack_require__(56);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -21902,7 +21924,7 @@ if(false) {
 }
 
 /***/ }),
-/* 57 */
+/* 56 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(3)(false);
@@ -21916,13 +21938,13 @@ exports.push([module.i, "", ""]);
 
 
 /***/ }),
-/* 58 */
+/* 57 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Symbol_js__ = __webpack_require__(26);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__getRawTag_js__ = __webpack_require__(61);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__objectToString_js__ = __webpack_require__(62);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Symbol_js__ = __webpack_require__(25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__getRawTag_js__ = __webpack_require__(60);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__objectToString_js__ = __webpack_require__(61);
 
 
 
@@ -21954,11 +21976,11 @@ function baseGetTag(value) {
 
 
 /***/ }),
-/* 59 */
+/* 58 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__freeGlobal_js__ = __webpack_require__(60);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__freeGlobal_js__ = __webpack_require__(59);
 
 
 /** Detect free variable `self`. */
@@ -21971,7 +21993,7 @@ var root = __WEBPACK_IMPORTED_MODULE_0__freeGlobal_js__["a" /* default */] || fr
 
 
 /***/ }),
-/* 60 */
+/* 59 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -21980,14 +22002,14 @@ var freeGlobal = typeof global == 'object' && global && global.Object === Object
 
 /* harmony default export */ __webpack_exports__["a"] = (freeGlobal);
 
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(27)))
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(26)))
 
 /***/ }),
-/* 61 */
+/* 60 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Symbol_js__ = __webpack_require__(26);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Symbol_js__ = __webpack_require__(25);
 
 
 /** Used for built-in method references. */
@@ -22037,7 +22059,7 @@ function getRawTag(value) {
 
 
 /***/ }),
-/* 62 */
+/* 61 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -22066,11 +22088,11 @@ function objectToString(value) {
 
 
 /***/ }),
-/* 63 */
+/* 62 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__overArg_js__ = __webpack_require__(64);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__overArg_js__ = __webpack_require__(63);
 
 
 /** Built-in value references. */
@@ -22080,7 +22102,7 @@ var getPrototype = Object(__WEBPACK_IMPORTED_MODULE_0__overArg_js__["a" /* defau
 
 
 /***/ }),
-/* 64 */
+/* 63 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -22102,7 +22124,7 @@ function overArg(func, transform) {
 
 
 /***/ }),
-/* 65 */
+/* 64 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -22138,11 +22160,11 @@ function isObjectLike(value) {
 
 
 /***/ }),
-/* 66 */
+/* 65 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(global, module) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ponyfill_js__ = __webpack_require__(68);
+/* WEBPACK VAR INJECTION */(function(global, module) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ponyfill_js__ = __webpack_require__(67);
 /* global window */
 
 
@@ -22163,10 +22185,10 @@ if (typeof self !== 'undefined') {
 var result = Object(__WEBPACK_IMPORTED_MODULE_0__ponyfill_js__["a" /* default */])(root);
 /* harmony default export */ __webpack_exports__["a"] = (result);
 
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(27), __webpack_require__(67)(module)))
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(26), __webpack_require__(66)(module)))
 
 /***/ }),
-/* 67 */
+/* 66 */
 /***/ (function(module, exports) {
 
 module.exports = function(originalModule) {
@@ -22196,7 +22218,7 @@ module.exports = function(originalModule) {
 
 
 /***/ }),
-/* 68 */
+/* 67 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -22221,14 +22243,14 @@ function symbolObservablePonyfill(root) {
 
 
 /***/ }),
-/* 69 */
+/* 68 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/* harmony export (immutable) */ __webpack_exports__["a"] = combineReducers;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__createStore__ = __webpack_require__(24);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_lodash_es_isPlainObject__ = __webpack_require__(25);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__utils_warning__ = __webpack_require__(28);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__createStore__ = __webpack_require__(23);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_lodash_es_isPlainObject__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__utils_warning__ = __webpack_require__(27);
 
 
 
@@ -22362,7 +22384,7 @@ function combineReducers(reducers) {
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
 
 /***/ }),
-/* 70 */
+/* 69 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -22416,12 +22438,12 @@ function bindActionCreators(actionCreators, dispatch) {
 }
 
 /***/ }),
-/* 71 */
+/* 70 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (immutable) */ __webpack_exports__["a"] = applyMiddleware;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__compose__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__compose__ = __webpack_require__(28);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 
@@ -22472,7 +22494,7 @@ function applyMiddleware() {
 }
 
 /***/ }),
-/* 72 */
+/* 71 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22482,9 +22504,9 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _redux = __webpack_require__(23);
+var _redux = __webpack_require__(22);
 
-var _answered = __webpack_require__(73);
+var _answered = __webpack_require__(72);
 
 var _answered2 = _interopRequireDefault(_answered);
 
@@ -22495,7 +22517,7 @@ exports.default = (0, _redux.combineReducers)({
 });
 
 /***/ }),
-/* 73 */
+/* 72 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
