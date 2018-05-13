@@ -4148,7 +4148,7 @@ var Copyright = exports.Copyright = function (_React$Component) {
             _react2.default.createElement(
               'div',
               { className: 'copyright_sub_img' },
-              _react2.default.createElement('img', { src: 'https://thecliparts.com/wp-content/uploads/2016/07/submarine-clipart-2.png' })
+              _react2.default.createElement('img', { src: 'http://www.clipartlord.com/wp-content/uploads/2015/04/submarine9.png' })
             ),
             _react2.default.createElement(
               'div',
@@ -4156,11 +4156,11 @@ var Copyright = exports.Copyright = function (_React$Component) {
               _react2.default.createElement(
                 'p',
                 null,
-                'This is a freely available clipart (not for commercial use) taken from ',
+                'This is a freely available clipart  taken from ',
                 _react2.default.createElement(
                   'a',
-                  { href: 'https://thecliparts.com/' },
-                  'thecliparts.com'
+                  { href: 'http://www.clipartlord.com/' },
+                  'www.clipartlord.com'
                 )
               )
             )
