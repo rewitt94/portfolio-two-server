@@ -2992,7 +2992,7 @@ var Projects = exports.Projects = function (_React$Component) {
               _react2.default.createElement(
                 'button',
                 { onClick: function onClick() {
-                    var win = window.open('https://github.com/rewitt94/portfolio-two-frontend', '_blank');win.focus();
+                    var win = window.open('https://github.com/rewitt94/portfolio-two-server', '_blank');win.focus();
                   } },
                 'Server GitHub'
               )
