@@ -316,6 +316,48 @@ if (process.env.NODE_ENV === 'production') {
 
 /***/ }),
 /* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+/**
+ * Copyright (c) 2013-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ *
+ * 
+ */
+
+function makeEmptyFunction(arg) {
+  return function () {
+    return arg;
+  };
+}
+
+/**
+ * This function accepts and discards inputs; it has no side effects. This is
+ * primarily useful idiomatically for overridable function endpoints which
+ * always need to be callable, since JS lacks a null-call idiom ala Cocoa.
+ */
+var emptyFunction = function emptyFunction() {};
+
+emptyFunction.thatReturns = makeEmptyFunction;
+emptyFunction.thatReturnsFalse = makeEmptyFunction(false);
+emptyFunction.thatReturnsTrue = makeEmptyFunction(true);
+emptyFunction.thatReturnsNull = makeEmptyFunction(null);
+emptyFunction.thatReturnsThis = function () {
+  return this;
+};
+emptyFunction.thatReturnsArgument = function (arg) {
+  return arg;
+};
+
+module.exports = emptyFunction;
+
+/***/ }),
+/* 4 */
 /***/ (function(module, exports) {
 
 /*
@@ -397,7 +439,7 @@ function toComment(sourceMap) {
 
 
 /***/ }),
-/* 4 */
+/* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -767,48 +809,6 @@ function updateLink (link, options, obj) {
 	if(oldSrc) URL.revokeObjectURL(oldSrc);
 }
 
-
-/***/ }),
-/* 5 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-/**
- * Copyright (c) 2013-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- *
- * 
- */
-
-function makeEmptyFunction(arg) {
-  return function () {
-    return arg;
-  };
-}
-
-/**
- * This function accepts and discards inputs; it has no side effects. This is
- * primarily useful idiomatically for overridable function endpoints which
- * always need to be callable, since JS lacks a null-call idiom ala Cocoa.
- */
-var emptyFunction = function emptyFunction() {};
-
-emptyFunction.thatReturns = makeEmptyFunction;
-emptyFunction.thatReturnsFalse = makeEmptyFunction(false);
-emptyFunction.thatReturnsTrue = makeEmptyFunction(true);
-emptyFunction.thatReturnsNull = makeEmptyFunction(null);
-emptyFunction.thatReturnsThis = function () {
-  return this;
-};
-emptyFunction.thatReturnsArgument = function (arg) {
-  return arg;
-};
-
-module.exports = emptyFunction;
 
 /***/ }),
 /* 6 */
@@ -1252,7 +1252,7 @@ module.exports = invariant;
 
 
 
-var emptyFunction = __webpack_require__(5);
+var emptyFunction = __webpack_require__(3);
 
 /**
  * Similar to invariant but only logs a warning if the condition is not met.
@@ -1428,7 +1428,7 @@ module.exports = ExecutionEnvironment;
  * @typechecks
  */
 
-var emptyFunction = __webpack_require__(5);
+var emptyFunction = __webpack_require__(3);
 
 /**
  * Upstream version of event listener. Does not take into account specific
@@ -1844,19 +1844,6 @@ var HomeBox = function (_React$Component2) {
             { style: { fontFamily: 'cursive', textAlign: 'center' } },
             'Welcome to ricky.hewitt.tech'
           ),
-          _react2.default.createElement('hr', null),
-          _react2.default.createElement('br', null),
-          _react2.default.createElement(
-            'p',
-            { style: { textAlign: 'center', fontSize: '20px' } },
-            'richard.hewitt.94@gmail.com'
-          ),
-          _react2.default.createElement(
-            'p',
-            { style: { textAlign: 'center', fontSize: '20px' } },
-            '+447402059516'
-          ),
-          _react2.default.createElement('br', null),
           _react2.default.createElement('hr', null)
         ),
         _react2.default.createElement(
@@ -2060,6 +2047,26 @@ var Coding = exports.Coding = function (_React$Component) {
           { className: 'coding_box' },
           _react2.default.createElement(
             'div',
+            { className: 'coding_page_header' },
+            _react2.default.createElement(
+              'h1',
+              null,
+              _react2.default.createElement(
+                'span',
+                null,
+                'Technologies'
+              )
+            ),
+            _react2.default.createElement('br', null),
+            _react2.default.createElement(
+              'h3',
+              null,
+              'Here are some technologies I have an encoutered. As a junior developer I hope to be adding many more.'
+            ),
+            _react2.default.createElement('hr', null)
+          ),
+          _react2.default.createElement(
+            'div',
             { className: 'header_box' },
             _react2.default.createElement(
               'h1',
@@ -2100,7 +2107,7 @@ var Coding = exports.Coding = function (_React$Component) {
                   _react2.default.createElement(
                     'p',
                     null,
-                    'Ability'
+                    'Opinion'
                   )
                 )
               )
@@ -2143,7 +2150,7 @@ var Coding = exports.Coding = function (_React$Component) {
                   _react2.default.createElement(
                     'p',
                     null,
-                    'Strong'
+                    'Fantastic'
                   )
                 )
               )
@@ -2154,136 +2161,7 @@ var Coding = exports.Coding = function (_React$Component) {
               _react2.default.createElement(
                 'p',
                 null,
-                'I do actually love Javascript (ninety percent of the time). Three + three / two = sixteen-point-five => Everything I learnt at university is a lie. Oh wait, one of the those three\'s a string. It\'s my best language and I hope to keep working with it! '
-              )
-            )
-          ),
-          _react2.default.createElement(
-            'div',
-            { className: 'grid_row' },
-            _react2.default.createElement(
-              'div',
-              { className: 'grid_inner_grid' },
-              _react2.default.createElement(
-                'div',
-                null,
-                _react2.default.createElement(
-                  'div',
-                  null,
-                  _react2.default.createElement(
-                    'p',
-                    null,
-                    'CSS'
-                  )
-                )
-              ),
-              _react2.default.createElement(
-                'div',
-                null,
-                _react2.default.createElement(
-                  'div',
-                  null,
-                  _react2.default.createElement(
-                    'p',
-                    null,
-                    'Strong'
-                  )
-                )
-              )
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'grid_inner_flex' },
-              _react2.default.createElement(
-                'p',
-                null,
-                'Everything has to be a rectangle? Hang-on these rectangles are pretty nifty! Having worked mainly with Javascript I\'ve used a large amount of CSS. So far I\'ve built myself two portfolio websites and various browser apps without bootstrap.'
-              )
-            )
-          ),
-          _react2.default.createElement(
-            'div',
-            { className: 'grid_row' },
-            _react2.default.createElement(
-              'div',
-              { className: 'grid_inner_grid' },
-              _react2.default.createElement(
-                'div',
-                null,
-                _react2.default.createElement(
-                  'div',
-                  null,
-                  _react2.default.createElement(
-                    'p',
-                    null,
-                    'HTML'
-                  )
-                )
-              ),
-              _react2.default.createElement(
-                'div',
-                null,
-                _react2.default.createElement(
-                  'div',
-                  null,
-                  _react2.default.createElement(
-                    'p',
-                    null,
-                    'Strong'
-                  )
-                )
-              )
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'grid_inner_flex' },
-              _react2.default.createElement(
-                'p',
-                null,
-                'Nothing too exciting here, but part of web-development.'
-              )
-            )
-          ),
-          _react2.default.createElement(
-            'div',
-            { className: 'grid_row' },
-            _react2.default.createElement(
-              'div',
-              { className: 'grid_inner_grid' },
-              _react2.default.createElement(
-                'div',
-                null,
-                _react2.default.createElement(
-                  'div',
-                  null,
-                  _react2.default.createElement(
-                    'p',
-                    null,
-                    'Ruby'
-                  )
-                )
-              ),
-              _react2.default.createElement(
-                'div',
-                null,
-                _react2.default.createElement(
-                  'div',
-                  null,
-                  _react2.default.createElement(
-                    'p',
-                    null,
-                    'OK'
-                  )
-                )
-              )
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'grid_inner_flex' },
-              _react2.default.createElement(
-                'p',
-                null,
-                'Ruby-ruby-ruby'
+                'What can I say about JS? My proper coding experience started with JS. I love JS. I\'d be happy for it to continue with JS. True, the language is definitely quirkly and flawed. However, Due to it\'s flexibility it feels almost effortless to write code.'
               )
             )
           ),
@@ -2315,7 +2193,7 @@ var Coding = exports.Coding = function (_React$Component) {
                   _react2.default.createElement(
                     'p',
                     null,
-                    'Weak'
+                    'Simple & Effective'
                   )
                 )
               )
@@ -2326,7 +2204,185 @@ var Coding = exports.Coding = function (_React$Component) {
               _react2.default.createElement(
                 'p',
                 null,
-                'Hello.'
+                'Before I started "actually" coding I did some python. I used it to solve Mathematical problems posted on ',
+                _react2.default.createElement(
+                  'a',
+                  { href: 'https://projecteuler.net/' },
+                  'ProjectEuler'
+                ),
+                '. More recently at Makers Academy we built a python testing framework. It was great to revisit the language with an understanding of object orientated principles. The language is certainly powerful and easy to use.'
+              )
+            )
+          ),
+          _react2.default.createElement(
+            'div',
+            { className: 'grid_row' },
+            _react2.default.createElement(
+              'div',
+              { className: 'grid_inner_grid' },
+              _react2.default.createElement(
+                'div',
+                null,
+                _react2.default.createElement(
+                  'div',
+                  null,
+                  _react2.default.createElement(
+                    'p',
+                    null,
+                    'Ruby'
+                  )
+                )
+              ),
+              _react2.default.createElement(
+                'div',
+                null,
+                _react2.default.createElement(
+                  'div',
+                  null,
+                  _react2.default.createElement(
+                    'p',
+                    null,
+                    'Elegant'
+                  )
+                )
+              )
+            ),
+            _react2.default.createElement(
+              'div',
+              { className: 'grid_inner_flex' },
+              _react2.default.createElement(
+                'p',
+                null,
+                'As the principle language at Makers Academy I\'ve done some Ruby. As a general purpose language Ruby is fairly comparible to Python, especially in the context of web development. As I like both, I\'m fairly indifferent between the two.'
+              )
+            )
+          ),
+          _react2.default.createElement(
+            'div',
+            { className: 'grid_row' },
+            _react2.default.createElement(
+              'div',
+              { className: 'grid_inner_grid' },
+              _react2.default.createElement(
+                'div',
+                null,
+                _react2.default.createElement(
+                  'div',
+                  null,
+                  _react2.default.createElement(
+                    'p',
+                    null,
+                    'Rust'
+                  )
+                )
+              ),
+              _react2.default.createElement(
+                'div',
+                null,
+                _react2.default.createElement(
+                  'div',
+                  null,
+                  _react2.default.createElement(
+                    'p',
+                    null,
+                    'Satisfying'
+                  )
+                )
+              )
+            ),
+            _react2.default.createElement(
+              'div',
+              { className: 'grid_inner_flex' },
+              _react2.default.createElement(
+                'p',
+                null,
+                'Rust is definitely a challenge, perhaps this is why I found the language so gratifying. TDDing a simple bank tech-test in Rust was astronomically harder than it would have been in JS. I will definitely be using Rust again. Somehow the language just feels elegant.'
+              )
+            )
+          ),
+          _react2.default.createElement(
+            'div',
+            { className: 'grid_row' },
+            _react2.default.createElement(
+              'div',
+              { className: 'grid_inner_grid' },
+              _react2.default.createElement(
+                'div',
+                null,
+                _react2.default.createElement(
+                  'div',
+                  null,
+                  _react2.default.createElement(
+                    'p',
+                    null,
+                    'CSS'
+                  )
+                )
+              ),
+              _react2.default.createElement(
+                'div',
+                null,
+                _react2.default.createElement(
+                  'div',
+                  null,
+                  _react2.default.createElement(
+                    'p',
+                    null,
+                    'Just do it'
+                  )
+                )
+              )
+            ),
+            _react2.default.createElement(
+              'div',
+              { className: 'grid_inner_flex' },
+              _react2.default.createElement(
+                'p',
+                null,
+                'Everything has to be a rectangle? Hang-on these rectangles are pretty nifty! Having frequently worked with JS in the browser environment I\'ve acquired a few tricks with CSS. So far I\'ve built myself two portfolio websites and various browser apps without bootstrap. I actually have really enjoyed CSS, but I do not want to become "the HTML guy".'
+              )
+            )
+          ),
+          _react2.default.createElement(
+            'div',
+            { className: 'grid_row' },
+            _react2.default.createElement(
+              'div',
+              { className: 'grid_inner_grid' },
+              _react2.default.createElement(
+                'div',
+                null,
+                _react2.default.createElement(
+                  'div',
+                  null,
+                  _react2.default.createElement(
+                    'p',
+                    null,
+                    'HTML'
+                  )
+                )
+              ),
+              _react2.default.createElement(
+                'div',
+                null,
+                _react2.default.createElement(
+                  'div',
+                  null,
+                  _react2.default.createElement(
+                    'p',
+                    null,
+                    'Trivial'
+                  )
+                )
+              )
+            ),
+            _react2.default.createElement(
+              'div',
+              { className: 'grid_inner_flex' },
+              _react2.default.createElement(
+                'p',
+                null,
+                'On reflection, probably the hardest language that I know... Nothing too exciting here, but part of web-development. Technically not a "programming" language.'
               )
             )
           ),
@@ -2358,7 +2414,7 @@ var Coding = exports.Coding = function (_React$Component) {
                   _react2.default.createElement(
                     'p',
                     null,
-                    'Very Weak'
+                    'No problem'
                   )
                 )
               )
@@ -2369,7 +2425,7 @@ var Coding = exports.Coding = function (_React$Component) {
               _react2.default.createElement(
                 'p',
                 null,
-                'Oi.'
+                'I have used both PSQL and SQLite. Since SQL is so widely used I figured it was probably worth a mention. However, I\'ve probably not done anything complicated enough to truly appreciate the language. I don\'t even know if SQL can be complicated? Not that databases are simple, but the commands to query them seem simple enough...'
               )
             )
           ),
@@ -2415,7 +2471,7 @@ var Coding = exports.Coding = function (_React$Component) {
                   _react2.default.createElement(
                     'p',
                     null,
-                    'Ability'
+                    'Opinion'
                   )
                 )
               )
@@ -2458,7 +2514,7 @@ var Coding = exports.Coding = function (_React$Component) {
                   _react2.default.createElement(
                     'p',
                     null,
-                    'OK'
+                    'Slick'
                   )
                 )
               )
@@ -2469,7 +2525,50 @@ var Coding = exports.Coding = function (_React$Component) {
               _react2.default.createElement(
                 'p',
                 null,
-                'This website is built with React so judge for yourself. I am comfortable with the component model and passing information via props and storing it in the state. I know there is further functionality that I am yet to learn. '
+                'Forgetting my brief encounter with Vue, React is the only client-side framework I know. I\'m comfortable with the component model and passing information via props and storing it in the state. I also introduced a very small Redux store to this app. However, I\'m still missing a few tricks, I suspect I should be generating more of my JSX instead of typing it.'
+              )
+            )
+          ),
+          _react2.default.createElement(
+            'div',
+            { className: 'grid_row' },
+            _react2.default.createElement(
+              'div',
+              { className: 'grid_inner_grid' },
+              _react2.default.createElement(
+                'div',
+                null,
+                _react2.default.createElement(
+                  'div',
+                  null,
+                  _react2.default.createElement(
+                    'p',
+                    null,
+                    'Rails'
+                  )
+                )
+              ),
+              _react2.default.createElement(
+                'div',
+                null,
+                _react2.default.createElement(
+                  'div',
+                  null,
+                  _react2.default.createElement(
+                    'p',
+                    null,
+                    'Wow'
+                  )
+                )
+              )
+            ),
+            _react2.default.createElement(
+              'div',
+              { className: 'grid_inner_flex' },
+              _react2.default.createElement(
+                'p',
+                null,
+                'At Makers Academy we built a acebook website with Rails. Without a doubt the framework is almost magic. If I were to build myself a full-stack application for myself I would probably use Rails for convience.'
               )
             )
           ),
@@ -2501,7 +2600,7 @@ var Coding = exports.Coding = function (_React$Component) {
                   _react2.default.createElement(
                     'p',
                     null,
-                    'OK'
+                    'Classic'
                   )
                 )
               )
@@ -2512,23 +2611,9 @@ var Coding = exports.Coding = function (_React$Component) {
               _react2.default.createElement(
                 'p',
                 null,
-                'Express is the only backend that I have worked with.'
+                'For me, express is a classic. Traditionally everything I was coding was a single page app hosted on an express server. The framework is simple and super quick to get going.'
               )
             )
-          ),
-          _react2.default.createElement(
-            'div',
-            { className: 'header_box' },
-            _react2.default.createElement(
-              'h1',
-              null,
-              _react2.default.createElement(
-                'span',
-                null,
-                'Accounts'
-              )
-            ),
-            _react2.default.createElement('hr', null)
           ),
           _react2.default.createElement(
             'div',
@@ -2545,7 +2630,7 @@ var Coding = exports.Coding = function (_React$Component) {
                   _react2.default.createElement(
                     'p',
                     null,
-                    'GitHub'
+                    'Sinatra'
                   )
                 )
               ),
@@ -2558,7 +2643,7 @@ var Coding = exports.Coding = function (_React$Component) {
                   _react2.default.createElement(
                     'p',
                     null,
-                    'IMGs'
+                    'Not a fan'
                   )
                 )
               )
@@ -2569,7 +2654,7 @@ var Coding = exports.Coding = function (_React$Component) {
               _react2.default.createElement(
                 'p',
                 null,
-                'Yes'
+                'At Makers Academy Sinatra was the first web framework we were introduced too. Personally I wouldn\'t choose Sinatra over Express. Without the power of Rails I woulnd\'t choose Ruby as my backend.'
               )
             )
           )
@@ -2650,7 +2735,7 @@ var Projects = exports.Projects = function (_React$Component) {
             _react2.default.createElement(
               'h3',
               null,
-              'Having attended Makers Academy I have learnt to write to good quality. We strive to follow good practices. Including TDD, object orientated principles, work-flow and most importantly team work.'
+              'Having attended Makers Academy I have learnt to write to good quality code. We strive to follow good practices. Including TDD, object orientated principles, work-flow and most importantly team work.'
             ),
             _react2.default.createElement('hr', null)
           ),
@@ -2674,7 +2759,15 @@ var Projects = exports.Projects = function (_React$Component) {
                 { onClick: function onClick() {
                     var win = window.open('https://github.com/DrSerpent/DrSerpent-Core', '_blank');win.focus();
                   } },
-                'GitHub Docs'
+                'GitHub'
+              ),
+              _react2.default.createElement('br', null),
+              _react2.default.createElement(
+                'button',
+                { onClick: function onClick() {
+                    var win = window.open('https://pypi.org/project/drserpent/', '_blank');win.focus();
+                  } },
+                'PyPi'
               )
             ),
             _react2.default.createElement(
@@ -2817,7 +2910,7 @@ var Projects = exports.Projects = function (_React$Component) {
               _react2.default.createElement(
                 'button',
                 { onClick: function onClick() {
-                    var win = window.open('/https://github.com/rewitt94/bowling', '_blank');win.focus();
+                    var win = window.open('https://github.com/rewitt94/bowling', '_blank');win.focus();
                   } },
                 'GitHub'
               )
@@ -2990,7 +3083,7 @@ var _navbars = __webpack_require__(6);
 
 var _redux = __webpack_require__(22);
 
-var _index = __webpack_require__(71);
+var _index = __webpack_require__(69);
 
 var _index2 = _interopRequireDefault(_index);
 
@@ -3312,9 +3405,9 @@ var CV = exports.CV = function (_React$Component) {
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__createStore__ = __webpack_require__(23);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__combineReducers__ = __webpack_require__(68);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__bindActionCreators__ = __webpack_require__(69);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__applyMiddleware__ = __webpack_require__(70);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__combineReducers__ = __webpack_require__(66);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__bindActionCreators__ = __webpack_require__(67);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__applyMiddleware__ = __webpack_require__(68);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__compose__ = __webpack_require__(28);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__utils_warning__ = __webpack_require__(27);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "createStore", function() { return __WEBPACK_IMPORTED_MODULE_0__createStore__["b"]; });
@@ -3350,7 +3443,7 @@ if (process.env.NODE_ENV !== 'production' && typeof isCrushed.name === 'string' 
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ActionTypes; });
 /* harmony export (immutable) */ __webpack_exports__["b"] = createStore;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash_es_isPlainObject__ = __webpack_require__(24);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_symbol_observable__ = __webpack_require__(65);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_symbol_observable__ = __webpack_require__(63);
 
 
 
@@ -3605,9 +3698,9 @@ var ActionTypes = {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__baseGetTag_js__ = __webpack_require__(57);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__getPrototype_js__ = __webpack_require__(62);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__isObjectLike_js__ = __webpack_require__(64);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__baseGetTag_js__ = __webpack_require__(55);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__getPrototype_js__ = __webpack_require__(60);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__isObjectLike_js__ = __webpack_require__(62);
 
 
 
@@ -3677,7 +3770,7 @@ function isPlainObject(value) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__root_js__ = __webpack_require__(58);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__root_js__ = __webpack_require__(56);
 
 
 /** Built-in value references. */
@@ -4202,8 +4295,6 @@ __webpack_require__(51);
 
 __webpack_require__(53);
 
-__webpack_require__(55);
-
 var _home = __webpack_require__(18);
 
 var _navbars = __webpack_require__(6);
@@ -4279,7 +4370,7 @@ _reactDom2.default.render(_react2.default.createElement(App, null), document.bod
  * LICENSE file in the root directory of this source tree.
  */
 
-var m=__webpack_require__(7),n=__webpack_require__(8),p=__webpack_require__(5),q="function"===typeof Symbol&&Symbol["for"],r=q?Symbol["for"]("react.element"):60103,t=q?Symbol["for"]("react.call"):60104,u=q?Symbol["for"]("react.return"):60105,v=q?Symbol["for"]("react.portal"):60106,w=q?Symbol["for"]("react.fragment"):60107,x="function"===typeof Symbol&&Symbol.iterator;
+var m=__webpack_require__(7),n=__webpack_require__(8),p=__webpack_require__(3),q="function"===typeof Symbol&&Symbol["for"],r=q?Symbol["for"]("react.element"):60103,t=q?Symbol["for"]("react.call"):60104,u=q?Symbol["for"]("react.return"):60105,v=q?Symbol["for"]("react.portal"):60106,w=q?Symbol["for"]("react.fragment"):60107,x="function"===typeof Symbol&&Symbol.iterator;
 function y(a){for(var b=arguments.length-1,e="Minified React error #"+a+"; visit http://facebook.github.io/react/docs/error-decoder.html?invariant\x3d"+a,c=0;c<b;c++)e+="\x26args[]\x3d"+encodeURIComponent(arguments[c+1]);b=Error(e+" for the full message or use the non-minified dev environment for full errors and additional helpful warnings.");b.name="Invariant Violation";b.framesToPop=1;throw b;}
 var z={isMounted:function(){return!1},enqueueForceUpdate:function(){},enqueueReplaceState:function(){},enqueueSetState:function(){}};function A(a,b,e){this.props=a;this.context=b;this.refs=n;this.updater=e||z}A.prototype.isReactComponent={};A.prototype.setState=function(a,b){"object"!==typeof a&&"function"!==typeof a&&null!=a?y("85"):void 0;this.updater.enqueueSetState(this,a,b,"setState")};A.prototype.forceUpdate=function(a){this.updater.enqueueForceUpdate(this,a,"forceUpdate")};
 function B(a,b,e){this.props=a;this.context=b;this.refs=n;this.updater=e||z}function C(){}C.prototype=A.prototype;var D=B.prototype=new C;D.constructor=B;m(D,A.prototype);D.isPureReactComponent=!0;function E(a,b,e){this.props=a;this.context=b;this.refs=n;this.updater=e||z}var F=E.prototype=new C;F.constructor=E;m(F,A.prototype);F.unstable_isAsyncReactComponent=!0;F.render=function(){return this.props.children};var G={current:null},H=Object.prototype.hasOwnProperty,I={key:!0,ref:!0,__self:!0,__source:!0};
@@ -4319,7 +4410,7 @@ var _assign = __webpack_require__(7);
 var emptyObject = __webpack_require__(8);
 var invariant = __webpack_require__(9);
 var warning = __webpack_require__(10);
-var emptyFunction = __webpack_require__(5);
+var emptyFunction = __webpack_require__(3);
 var checkPropTypes = __webpack_require__(11);
 
 // TODO: this is special because it gets imported during build.
@@ -5694,7 +5785,7 @@ module.exports = ReactPropTypesSecret;
 /*
  Modernizr 3.0.0pre (Custom Build) | MIT
 */
-var aa=__webpack_require__(1),l=__webpack_require__(12),B=__webpack_require__(7),C=__webpack_require__(5),ba=__webpack_require__(13),da=__webpack_require__(14),ea=__webpack_require__(15),fa=__webpack_require__(16),ia=__webpack_require__(17),D=__webpack_require__(8);
+var aa=__webpack_require__(1),l=__webpack_require__(12),B=__webpack_require__(7),C=__webpack_require__(3),ba=__webpack_require__(13),da=__webpack_require__(14),ea=__webpack_require__(15),fa=__webpack_require__(16),ia=__webpack_require__(17),D=__webpack_require__(8);
 function E(a){for(var b=arguments.length-1,c="Minified React error #"+a+"; visit http://facebook.github.io/react/docs/error-decoder.html?invariant\x3d"+a,d=0;d<b;d++)c+="\x26args[]\x3d"+encodeURIComponent(arguments[d+1]);b=Error(c+" for the full message or use the non-minified dev environment for full errors and additional helpful warnings.");b.name="Invariant Violation";b.framesToPop=1;throw b;}aa?void 0:E("227");
 var oa={children:!0,dangerouslySetInnerHTML:!0,defaultValue:!0,defaultChecked:!0,innerHTML:!0,suppressContentEditableWarning:!0,suppressHydrationWarning:!0,style:!0};function pa(a,b){return(a&b)===b}
 var ta={MUST_USE_PROPERTY:1,HAS_BOOLEAN_VALUE:4,HAS_NUMERIC_VALUE:8,HAS_POSITIVE_NUMERIC_VALUE:24,HAS_OVERLOADED_BOOLEAN_VALUE:32,HAS_STRING_BOOLEAN_VALUE:64,injectDOMPropertyConfig:function(a){var b=ta,c=a.Properties||{},d=a.DOMAttributeNamespaces||{},e=a.DOMAttributeNames||{};a=a.DOMMutationMethods||{};for(var f in c){ua.hasOwnProperty(f)?E("48",f):void 0;var g=f.toLowerCase(),h=c[f];g={attributeName:g,attributeNamespace:null,propertyName:f,mutationMethod:null,mustUseProperty:pa(h,b.MUST_USE_PROPERTY),
@@ -5996,7 +6087,7 @@ var invariant = __webpack_require__(9);
 var warning = __webpack_require__(10);
 var ExecutionEnvironment = __webpack_require__(12);
 var _assign = __webpack_require__(7);
-var emptyFunction = __webpack_require__(5);
+var emptyFunction = __webpack_require__(3);
 var EventListener = __webpack_require__(13);
 var getActiveElement = __webpack_require__(14);
 var shallowEqual = __webpack_require__(15);
@@ -21542,7 +21633,7 @@ var transform;
 var options = {"hmr":true}
 options.transform = transform
 // add the styles to the DOM
-var update = __webpack_require__(4)(content, options);
+var update = __webpack_require__(5)(content, options);
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -21562,7 +21653,7 @@ if(false) {
 /* 43 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(3)(false);
+exports = module.exports = __webpack_require__(4)(false);
 // imports
 
 
@@ -21682,7 +21773,7 @@ var transform;
 var options = {"hmr":true}
 options.transform = transform
 // add the styles to the DOM
-var update = __webpack_require__(4)(content, options);
+var update = __webpack_require__(5)(content, options);
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -21702,12 +21793,12 @@ if(false) {
 /* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(3)(false);
+exports = module.exports = __webpack_require__(4)(false);
 // imports
 
 
 // module
-exports.push([module.i, ".coding_box {\n  position: relative;\n  padding-top: 50px;\n  padding-bottom: 100px;\n}\n\n.night .coding_box {\n  background-color: rgb(41, 41, 48);\n  color: white;\n}\n\n.header_box {\n  margin-top: 100px;\n  position: relative;\n  width: 80%;\n  left: 10%;\n  margin-bottom: 30px;\n}\n\n.index_row {\n  position: relative;\n  display: grid;\n  grid-template-columns: 2fr 5fr;\n  width: 90%;\n  left: 5%;\n  text-align: center;\n}\n\n.index_inner_grid {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n  border-style: solid;\n  border-width: thin;\n  align-items: center;\n  background-color: rgb(230, 230, 220);\n  height: 70px;\n}\n\n.index_inner_grid > div {\n  display: flex;\n  height:100%;\n  width:100%;\n  border-style: solid;\n  border-width: thin;\n  align-items: center;\n}\n\n.index_inner_grid > div > div {\n  flex-grow: 1;\n}\n\n.index_inner_flex {\n  display: flex;\n  border-style: solid;\n  border-width: thin;\n  align-items: center;\n  background-color: rgb(230, 230, 220);\n  height: 70px;\n}\n\n.index_inner_flex > p {\n  flex-grow: 1;\n}\n\n.night .index_row > div {\n  background-color: rgb(20, 20, 25);\n}\n\n.grid_row {\n  position: relative;\n  display: grid;\n  grid-template-columns: 2fr 5fr;\n  width: 90%;\n  left: 5%;\n  text-align: center;\n}\n\n.grid_inner_grid {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n  border-style: solid;\n  border-width: thin;\n  align-items: center;\n  background-color: rgb(230, 230, 220);\n  height: 150px;\n}\n\n.grid_inner_grid > div {\n  display: flex;\n  height:100%;\n  width:100%;\n  border-style: solid;\n  border-width: thin;\n  align-items: center;\n}\n\n.grid_inner_grid > div > div {\n  flex-grow: 1;\n}\n\n.grid_inner_flex {\n  display: flex;\n  border-style: solid;\n  border-width: thin;\n  align-items: center;\n  background-color: rgb(230, 230, 220);\n  height: 150px;\n}\n\n.index_inner_flex > p {\n  flex-grow: 1;\n}\n\n\n.night .grid_row > div {\n  background-color: rgb(20, 20, 25);\n}\n\n@media screen and (max-width: 700px) {\n  .index_inner_grid {\n    grid-template-columns: auto;\n    grid-template-rows: 1fr 1fr;\n  }\n  .grid_inner_grid {\n    grid-template-columns: auto;\n    grid-template-rows: 1fr 1fr;\n  }\n}\n", ""]);
+exports.push([module.i, ".coding_box {\n  position: relative;\n  padding-top: 50px;\n  padding-bottom: 100px;\n}\n\n.night .coding_box {\n  background-color: rgb(41, 41, 48);\n  color: white;\n}\n\n.header_box {\n  margin-top: 100px;\n  position: relative;\n  width: 80%;\n  left: 10%;\n  margin-bottom: 30px;\n}\n\n.coding_page_header {\n  position: relative;\n  text-align: center;\n  margin-top: 100px;\n  width: 60%;\n  left: 20%;\n}\n\n.index_row {\n  position: relative;\n  display: grid;\n  grid-template-columns: 2fr 5fr;\n  width: 90%;\n  left: 5%;\n  text-align: center;\n  font-size: 19px;\n  font-weight: bold;\n}\n\n.index_inner_grid {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n  border-style: solid;\n  border-width: thin;\n  align-items: center;\n  background-color: rgb(230, 230, 220);\n  min-height: 70px;\n}\n\n.index_inner_grid > div {\n  display: flex;\n  height:100%;\n  width:100%;\n  border-style: solid;\n  border-width: thin;\n  align-items: center;\n}\n\n.index_inner_grid > div > div {\n  flex-grow: 1;\n}\n\n.index_inner_flex {\n  display: flex;\n  border-style: solid;\n  border-width: thin;\n  text-align: center;\n  align-items: center;\n  background-color: rgb(230, 230, 220);\n  height: 70px;\n}\n\n.index_inner_flex > p {\n  flex-grow: 1;\n}\n\n.night .index_row > div {\n  background-color: rgb(20, 20, 25);\n}\n\n.grid_row {\n  position: relative;\n  display: grid;\n  grid-template-columns: 2fr 5fr;\n  width: 90%;\n  left: 5%;\n  text-align: center;\n  font-size: 19px;\n}\n\n.grid_inner_grid {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n  border-style: solid;\n  border-width: thin;\n  align-items: center;\n  background-color: rgb(230, 230, 220);\n  min-height: 150px;\n}\n\n.grid_inner_grid > div {\n  display: flex;\n  height:100%;\n  width:100%;\n  border-style: solid;\n  border-width: thin;\n  align-items: center;\n  font-weight: bold;\n}\n\n.grid_inner_grid > div > div {\n  flex-grow: 1;\n}\n\n.grid_inner_flex {\n  display: flex;\n  border-style: solid;\n  border-width: thin;\n  align-items: center;\n  background-color: rgb(230, 230, 220);\n  min-height: 150px;\n}\n\n.index_inner_flex > p {\n  flex-grow: 1;\n}\n\n\n.night .grid_row > div {\n  background-color: rgb(20, 20, 25);\n}\n\n@media screen and (max-width: 700px) {\n  .index_inner_grid {\n    grid-template-columns: auto;\n    grid-template-rows: 1fr 1fr;\n  }\n  .grid_inner_grid {\n    grid-template-columns: auto;\n    grid-template-rows: 1fr 1fr;\n  }\n}\n", ""]);
 
 // exports
 
@@ -21727,7 +21818,7 @@ var transform;
 var options = {"hmr":true}
 options.transform = transform
 // add the styles to the DOM
-var update = __webpack_require__(4)(content, options);
+var update = __webpack_require__(5)(content, options);
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -21747,7 +21838,7 @@ if(false) {
 /* 48 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(3)(false);
+exports = module.exports = __webpack_require__(4)(false);
 // imports
 
 
@@ -21772,7 +21863,7 @@ var transform;
 var options = {"hmr":true}
 options.transform = transform
 // add the styles to the DOM
-var update = __webpack_require__(4)(content, options);
+var update = __webpack_require__(5)(content, options);
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -21792,7 +21883,7 @@ if(false) {
 /* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(3)(false);
+exports = module.exports = __webpack_require__(4)(false);
 // imports
 
 
@@ -21817,7 +21908,7 @@ var transform;
 var options = {"hmr":true}
 options.transform = transform
 // add the styles to the DOM
-var update = __webpack_require__(4)(content, options);
+var update = __webpack_require__(5)(content, options);
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -21837,7 +21928,7 @@ if(false) {
 /* 52 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(3)(false);
+exports = module.exports = __webpack_require__(4)(false);
 // imports
 
 
@@ -21862,7 +21953,7 @@ var transform;
 var options = {"hmr":true}
 options.transform = transform
 // add the styles to the DOM
-var update = __webpack_require__(4)(content, options);
+var update = __webpack_require__(5)(content, options);
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -21882,7 +21973,7 @@ if(false) {
 /* 54 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(3)(false);
+exports = module.exports = __webpack_require__(4)(false);
 // imports
 
 
@@ -21894,57 +21985,12 @@ exports.push([module.i, ".copyright_box {\n  position: relative;\n  padding-top:
 
 /***/ }),
 /* 55 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(56);
-if(typeof content === 'string') content = [[module.i, content, '']];
-// Prepare cssTransformation
-var transform;
-
-var options = {"hmr":true}
-options.transform = transform
-// add the styles to the DOM
-var update = __webpack_require__(4)(content, options);
-if(content.locals) module.exports = content.locals;
-// Hot Module Replacement
-if(false) {
-	// When the styles change, update the <style> tags
-	if(!content.locals) {
-		module.hot.accept("!!../../node_modules/css-loader/index.js!./myself.css", function() {
-			var newContent = require("!!../../node_modules/css-loader/index.js!./myself.css");
-			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-			update(newContent);
-		});
-	}
-	// When the module is disposed, remove the <style> tags
-	module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-/* 56 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(3)(false);
-// imports
-
-
-// module
-exports.push([module.i, "", ""]);
-
-// exports
-
-
-/***/ }),
-/* 57 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Symbol_js__ = __webpack_require__(25);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__getRawTag_js__ = __webpack_require__(60);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__objectToString_js__ = __webpack_require__(61);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__getRawTag_js__ = __webpack_require__(58);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__objectToString_js__ = __webpack_require__(59);
 
 
 
@@ -21976,11 +22022,11 @@ function baseGetTag(value) {
 
 
 /***/ }),
-/* 58 */
+/* 56 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__freeGlobal_js__ = __webpack_require__(59);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__freeGlobal_js__ = __webpack_require__(57);
 
 
 /** Detect free variable `self`. */
@@ -21993,7 +22039,7 @@ var root = __WEBPACK_IMPORTED_MODULE_0__freeGlobal_js__["a" /* default */] || fr
 
 
 /***/ }),
-/* 59 */
+/* 57 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -22005,7 +22051,7 @@ var freeGlobal = typeof global == 'object' && global && global.Object === Object
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(26)))
 
 /***/ }),
-/* 60 */
+/* 58 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -22059,7 +22105,7 @@ function getRawTag(value) {
 
 
 /***/ }),
-/* 61 */
+/* 59 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -22088,11 +22134,11 @@ function objectToString(value) {
 
 
 /***/ }),
-/* 62 */
+/* 60 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__overArg_js__ = __webpack_require__(63);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__overArg_js__ = __webpack_require__(61);
 
 
 /** Built-in value references. */
@@ -22102,7 +22148,7 @@ var getPrototype = Object(__WEBPACK_IMPORTED_MODULE_0__overArg_js__["a" /* defau
 
 
 /***/ }),
-/* 63 */
+/* 61 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -22124,7 +22170,7 @@ function overArg(func, transform) {
 
 
 /***/ }),
-/* 64 */
+/* 62 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -22160,11 +22206,11 @@ function isObjectLike(value) {
 
 
 /***/ }),
-/* 65 */
+/* 63 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(global, module) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ponyfill_js__ = __webpack_require__(67);
+/* WEBPACK VAR INJECTION */(function(global, module) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ponyfill_js__ = __webpack_require__(65);
 /* global window */
 
 
@@ -22185,10 +22231,10 @@ if (typeof self !== 'undefined') {
 var result = Object(__WEBPACK_IMPORTED_MODULE_0__ponyfill_js__["a" /* default */])(root);
 /* harmony default export */ __webpack_exports__["a"] = (result);
 
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(26), __webpack_require__(66)(module)))
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(26), __webpack_require__(64)(module)))
 
 /***/ }),
-/* 66 */
+/* 64 */
 /***/ (function(module, exports) {
 
 module.exports = function(originalModule) {
@@ -22218,7 +22264,7 @@ module.exports = function(originalModule) {
 
 
 /***/ }),
-/* 67 */
+/* 65 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -22243,7 +22289,7 @@ function symbolObservablePonyfill(root) {
 
 
 /***/ }),
-/* 68 */
+/* 66 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -22384,7 +22430,7 @@ function combineReducers(reducers) {
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
 
 /***/ }),
-/* 69 */
+/* 67 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -22438,7 +22484,7 @@ function bindActionCreators(actionCreators, dispatch) {
 }
 
 /***/ }),
-/* 70 */
+/* 68 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -22494,7 +22540,7 @@ function applyMiddleware() {
 }
 
 /***/ }),
-/* 71 */
+/* 69 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22506,7 +22552,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _redux = __webpack_require__(22);
 
-var _answered = __webpack_require__(72);
+var _answered = __webpack_require__(70);
 
 var _answered2 = _interopRequireDefault(_answered);
 
@@ -22517,7 +22563,7 @@ exports.default = (0, _redux.combineReducers)({
 });
 
 /***/ }),
-/* 72 */
+/* 70 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
